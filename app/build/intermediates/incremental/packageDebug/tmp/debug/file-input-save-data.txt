@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Sep 02 14:08:32 CEST 2018
+#Sun Sep 02 16:26:24 CEST 2018
 1.base=C\:\\Users\\giuli\\StudioProjects\\BabyCareApp\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 0.baseType=DIRECTORY
 1.baseType=DIRECTORY

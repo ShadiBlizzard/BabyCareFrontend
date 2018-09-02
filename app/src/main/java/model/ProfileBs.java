@@ -1,9 +1,13 @@
 package model;
 
-public class ProfileBs {
+import java.io.Serializable;
 
+public class ProfileBs implements Serializable {
+
+    private static final long serialVersionUID = 1L;
     private String name, surname, pic, address;
     private float rating;
+    private double hourlyPrice=10.50;
 
     public ProfileBs(String name, String surname, String pic, String address, float rating) {
         this.name=name;
@@ -32,5 +36,9 @@ public class ProfileBs {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public double getHourlyPrice() {
+        return hourlyPrice;
     }
 }

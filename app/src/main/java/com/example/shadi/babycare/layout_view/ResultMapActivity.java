@@ -13,6 +13,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.io.IOException;
@@ -21,7 +22,7 @@ import java.util.List;
 
 import model.ProfileBs;
 
-public class ResultMapActivity extends BaseActivity implements OnMapReadyCallback{
+public class ResultMapActivity extends BaseActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener{
 
     private MapsFragment mf;
     private List<ProfileBs> bs = new ArrayList<>(), convertedTags=new ArrayList<>();
@@ -112,17 +113,46 @@ public class ResultMapActivity extends BaseActivity implements OnMapReadyCallbac
             map.addMarker(marker);
 
             //I create a popup for that bs
+
             //TODO work in progress...
 
         }
+
+        map.setOnMarkerClickListener(this);
     }
 
 
     public void changeLocation(Double lat, Double lng) {
         LatLng position = new LatLng(lat, lng);
         map.moveCamera(CameraUpdateFactory.newLatLng(position));
-        MarkerOptions markerOptions = new MarkerOptions();
-        markerOptions.position(position).title("Your position");
-        map.addMarker(markerOptions);
+    }
+
+    @Override
+    public boolean onMarkerClick(Marker marker) {
+        LatLng coordinates = marker.getPosition();
+        Double latiM = coordinates.latitude;
+        Double longiM = coordinates.longitude;
+
+        ProfileBs bs = null;
+        //looking for the correct bs
+        for (int i = 0; i< convertedTags.size(); i++) {
+            String coord = convertedTags.get(i).getAddress();
+            int index = coord.indexOf('+');
+            Double latitude = Double.parseDouble(coord.substring(0, index-1));
+            Double longitude = Double.parseDouble(coord.substring(index+1, coord.length()-1));
+
+
+            if(Double.compare(latiM, latitude) == 0 && Double.compare(longiM, longitude)== 0) {
+                bs = convertedTags.get(i);
+                break;
+            }
+        }
+
+        Intent it = new Intent(getApplicationContext(), PopupBsInfoActivity.class);
+        it.putExtra("profile", bs);
+        startActivity(it);
+
+        return true;
+
     }
 }
