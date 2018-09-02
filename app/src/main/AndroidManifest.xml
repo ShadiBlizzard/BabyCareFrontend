@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.shadi.babycare">
+
+    <!-- adding permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="BabyCare"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/BabyCare"
+        tools:replace="android:label">
+        <activity
+            android:name=".layout_view.SearchingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BabyCare">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".layout_view.LoginActivity"
+            android:parentActivityName=".layout_view.MainActivity"
+            android:screenOrientation="portrait">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".layout_view.MainActivity" />
+        </activity>
+        <activity
+            android:name=".layout_view.Register0Activity"
+            android:parentActivityName=".layout_view.Register1Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.Register1Activity"
+            android:parentActivityName=".layout_view.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.RegistrationOkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.BaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.Register2Activity"
+            android:parentActivityName=".layout_view.Register0Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.Register3Activity"
+            android:parentActivityName=".layout_view.Register2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.Register4Activity"
+            android:parentActivityName=".layout_view.Register3Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.MessagesListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.ResRequestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.PolicyActivity"
+            android:parentActivityName=".layout_view.BaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.ReservationsListActivity"
+            android:screenOrientation="portrait" />
+        <!--
+            <activity
+            android:name=".layout_view.SearchingActivity"
+            android:screenOrientation="portrait" />
+        -->
+        <activity
+            android:name=".layout_view.ReviewFormActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.ReviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.RegistrationKoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.ProfileListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.ProfileParFromBsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.ProfileBsFromBsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.ProfileParFromParActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.ReservationDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.ReservingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.OkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.HomeParentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.KoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.ResRequestAnswerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.SetAvailabilityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.HomeBabysitterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.ProfileBsFromParActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.UpdateProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.HomeAdminActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.ProfileUserFromAdmin"
+            android:screenOrientation="portrait" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".layout_view.ResultMapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layout_view.PopupBsInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BabyCare.PopMe" />
+        <activity android:name=".layout_view.ReviewListActivity"></activity>
+    </application>
+
+</manifest>

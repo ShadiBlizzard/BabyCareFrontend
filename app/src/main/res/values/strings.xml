@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">BabyCare</string>
+    <string name="home">HOME</string>
+    <string name="messages">NOTIFICATIONS</string>
+    <string name="reservations">RESERVATIONS</string>
+    <string name="invite">INVITE</string>
+    <string name="profile">PROFILE</string>
+    <string name="settings">SETTINGS</string>
+    <string name="policy">POLICY</string>
+    <string name="logout">LOGOUT</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <!--temporaneous hardcoding-->
+    <string-array name="planets_array1">
+        <item>Select District</item>
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+    <string-array name="planets_array">
+        <item>Select Neighbourhood</item>
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+
+</resources>
+

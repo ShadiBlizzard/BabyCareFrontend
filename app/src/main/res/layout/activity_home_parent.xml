@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".layout_view.HomeParentActivity">
+
+    <ImageView
+        android:id="@+id/map_ico_home"
+        android:layout_width="250dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="8dp"
+        android:clickable="false"
+        android:src="@drawable/mapicon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:padding="10dp"
+        android:text="SEARCH FOR A BABYSITTER"
+        android:textAppearance="@style/TextBabyCare"
+        android:textColor="@color/text_color_babycare"
+        android:textSize="22dp"
+        android:clickable="false"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/map_ico_home" />
+</android.support.constraint.ConstraintLayout>

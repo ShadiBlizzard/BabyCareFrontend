@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".layout_view.SetAvailabilityActivity">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@id/send_avail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="10dp"
+
+            tools:context=".layout_view.SetAvailabilityActivity">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:text="Select a date and your availabilities for that date"
+                android:textAppearance="@style/TextBabyCare"
+                android:textColor="@color/mainColor"
+                android:textSize="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/set_calendar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/edittext_bc"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center"
+                android:hint="DD/MM/YYYY"
+                android:textColor="@color/form_black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView6" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/hours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/set_calendar">
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:text="Predefined period:"
+                    android:textColor="@color/mainColor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/per1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/button_babycare_disabled"
+                    android:paddingBottom="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textView21">
+
+                    <CheckBox
+                        android:id="@+id/period_pred1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:buttonTint="@color/button_babycare_normal"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:text="All the day"
+                        android:textColor="@color/text_color_babycare"
+                        android:textSize="19dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="parent" />
+
+
+                </android.support.constraint.ConstraintLayout>
+
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:text="Custom settings:"
+                    android:textColor="@color/mainColor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/per1" />
+
+                <ScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@color/button_babycare_disabled"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textView22">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp">
+
+                        <android.support.constraint.ConstraintLayout
+                            android:id="@+id/first_group"
+                            android:layout_width="169dp"
+                            android:layout_height="480dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:paddingRight="20dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <CheckBox
+                                android:id="@+id/period1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:buttonTint="@color/button_babycare_normal"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="0.00-1.00"
+                                android:textColor="@color/text_color_babycare"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="parent" />
+
+                            <CheckBox
+                                android:id="@+id/period2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:buttonTint="@color/button_babycare_normal"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="1.00-2.00"
+                                android:textColor="@color/text_color_babycare"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/period1" />
+
+                            <CheckBox
+                                android:id="@+id/period3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:buttonTint="@color/button_babycare_normal"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="2.00-3.00"
+                                android:textColor="@color/text_color_babycare"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/period2" />
+
+                            <CheckBox
+                                android:id="@+id/period4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:buttonTint="@color/button_babycare_normal"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="3.00-4.00"
+                                android:textColor="@color/text_color_babycare"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/period3" />
+
+                            <CheckBox
+                                android:id="@+id/period5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:buttonTint="@color/button_babycare_normal"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="4.00-5.00"
+                                android:textColor="@color/text_color_babycare"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/period4" />
+
+                            <CheckBox
+                                android:id="@+id/period6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:buttonTint="@color/button_babycare_normal"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="5.00-6.00"
+                                android:textColor="@color/text_color_babycare"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/period5" />
+
+                            <CheckBox
+                                android:id="@+id/period7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:buttonTint="@color/button_babycare_normal"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="6.00-7.00"
+                                android:textColor="@color/text_color_babycare"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/period6" />
+
+                            <CheckBox
+                                android:id="@+id/period8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:buttonTint="@color/button_babycare_normal"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="7.00-8.00"
+                                android:textColor="@color/text_color_babycare"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/period7" />
+
+                            <CheckBox
+                                android:id="@+id/period9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:buttonTint="@color/button_babycare_normal"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="8.00-9.00"
+                                android:textColor="@color/text_color_babycare"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/period8" />
+
+                            <CheckBox
+                                android:id="@+id/period10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:buttonTint="@color/button_babycare_normal"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="9.00-10.00"
+                                android:textColor="@color/text_color_babycare"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/period9" />
+
+                            <CheckBox
+                                android:id="@+id/period11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:buttonTint="@color/button_babycare_normal"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="10.00-11.00"
+                                android:textColor="@color/text_color_babycare"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/period10" />
+
+                            <CheckBox
+                                android:id="@+id/period12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:buttonTint="@color/button_babycare_normal"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="11.00-12.00"
+                                android:textColor="@color/text_color_babycare"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/period11" />
+
+                        </android.support.constraint.ConstraintLayout>
+
+                        <android.support.constraint.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:paddingRight="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/first_group"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            >
+
+                            <CheckBox
+                                android:id="@+id/period13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:buttonTint="@color/button_babycare_normal"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="12.00-13.00"
+                                android:textColor="@color/text_color_babycare"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="parent" />
+
+                            <CheckBox
+                                android:id="@+id/period14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:buttonTint="@color/button_babycare_normal"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="13.00-14.00"
+                                android:textColor="@color/text_color_babycare"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/period13" />
+
+                            <CheckBox
+                                android:id="@+id/period15"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:buttonTint="@color/button_babycare_normal"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="14.00-15.00"
+                                android:textColor="@color/text_color_babycare"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/period14" />
+
+                            <CheckBox
+                                android:id="@+id/period16"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:buttonTint="@color/button_babycare_normal"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="15.00-16.00"
+                                android:textColor="@color/text_color_babycare"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/period15" />
+
+                            <CheckBox
+                                android:id="@+id/period17"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:buttonTint="@color/button_babycare_normal"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="16.00-17.00"
+                                android:textColor="@color/text_color_babycare"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/period16" />
+
+                            <CheckBox
+                                android:id="@+id/period18"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:buttonTint="@color/button_babycare_normal"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="17.00-18.00"
+                                android:textColor="@color/text_color_babycare"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/period17" />
+
+                            <CheckBox
+                                android:id="@+id/period19"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:buttonTint="@color/button_babycare_normal"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="18.00-19.00"
+                                android:textColor="@color/text_color_babycare"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/period18" />
+
+                            <CheckBox
+                                android:id="@+id/period20"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:buttonTint="@color/button_babycare_normal"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="19.00-20.00"
+                                android:textColor="@color/text_color_babycare"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/period19" />
+
+                            <CheckBox
+                                android:id="@+id/period21"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:buttonTint="@color/button_babycare_normal"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="20.00-21.00"
+                                android:textColor="@color/text_color_babycare"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/period20" />
+
+                            <CheckBox
+                                android:id="@+id/period22"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:buttonTint="@color/button_babycare_normal"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="21.00-22.00"
+                                android:textColor="@color/text_color_babycare"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/period21" />
+
+                            <CheckBox
+                                android:id="@+id/period23"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:buttonTint="@color/button_babycare_normal"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="22.00-23.00"
+                                android:textColor="@color/text_color_babycare"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/period22" />
+
+                            <CheckBox
+                                android:id="@+id/period24"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:buttonTint="@color/button_babycare_normal"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="23.00-24.00"
+                                android:textColor="@color/text_color_babycare"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/period23" />
+                        </android.support.constraint.ConstraintLayout>
+
+                    </android.support.constraint.ConstraintLayout>
+                </ScrollView>
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/send_avail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/button_babycare_normal"
+        android:text="send availabilities"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>
