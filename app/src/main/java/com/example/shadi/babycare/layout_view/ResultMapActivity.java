@@ -3,6 +3,7 @@ import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
+import android.provider.Telephony;
 import android.support.v4.app.FragmentManager;
 import android.widget.FrameLayout;
 
@@ -18,40 +19,43 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
+import model.AppointmentStatus;
 import model.ProfileBs;
+import model.ProfilePar;
+import model.Reservation;
 
 public class ResultMapActivity extends BaseActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener{
 
     private MapsFragment mf;
     private List<ProfileBs> bs = new ArrayList<>(), convertedTags=new ArrayList<>();
     private Geocoder geocoder;
+    private Calendar date, start, end;
     private String lat;
     private String lng;
     private GoogleMap map;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //TODO backend call,
-        /* idea: quando il backend ritorna la lista di bs,
-        creo una nuova lista in cui sostituisco l'indirizzo con il geotag
-        in questo modo quando un parent clicca il geotag mostro le info della
-        babysitter in quella posizione
-         */
         Intent i = getIntent();
         lat = i.getStringExtra("lat");
         lng = i.getStringExtra("lng");
+        bs = (List<ProfileBs>) i.getSerializableExtra("bs_list");
+
+        //date and time of reservation
+        date= (Calendar) i.getSerializableExtra("date");
+        start= (Calendar) i.getSerializableExtra("start");
+        end= (Calendar) i.getSerializableExtra("end");
 
         super.onCreate(savedInstanceState);
         FrameLayout fl = findViewById(R.id.content_frame);
         getLayoutInflater().inflate(R.layout.activity_result_map, fl);
 
-        //TEMPORANEOUS HARDCODING
-        bs.add(new ProfileBs("sbiribilla", "volante", "pic", "Milano, piazza leonardo", 5));
-        bs.add(new ProfileBs("sbiribilla", "volante", "pic", "Milano, via bonardi", 5));
 
-        super.setTitle("Results");
+        super.setTitle("Available babysitters");
 
         //map setting
         mf = new MapsFragment();
@@ -112,9 +116,6 @@ public class ResultMapActivity extends BaseActivity implements OnMapReadyCallbac
             marker.position(new LatLng(latitude, longitude));
             map.addMarker(marker);
 
-            //I create a popup for that bs
-
-            //TODO work in progress...
 
         }
 
@@ -150,6 +151,10 @@ public class ResultMapActivity extends BaseActivity implements OnMapReadyCallbac
 
         Intent it = new Intent(getApplicationContext(), PopupBsInfoActivity.class);
         it.putExtra("profile", bs);
+
+        Reservation r = new Reservation(new LatLng(Double.parseDouble(lat), Double.parseDouble(lng)), start, end, date, new ProfilePar(), bs, AppointmentStatus.REQUESTED);
+
+        it.putExtra("reservationData", r);
         startActivity(it);
 
         return true;

@@ -12,38 +12,49 @@
         android:layout_height="match_parent"
         tools:context=".layout_view.SearchingActivity">
 
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center"
+            android:text="Select an address, a date
+and times for the appointment"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
         <EditText
             android:id="@+id/manual_address"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="128dp"
+            android:layout_marginTop="30dp"
             android:background="@drawable/edittext_bc"
             android:ems="10"
             android:hint="address"
             android:inputType="textPersonName"
             android:textAppearance="@style/TextBabyCare"
             android:textColor="@color/form_black"
-            app:layout_constraintEnd_toStartOf="@+id/locator"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageButton
-            android:id="@+id/locator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="4dp"
-            android:layout_marginTop="128dp"
-            android:background="@color/button_babycare_normal"
-            android:padding="8dp"
-            android:tint="#fff"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/manual_address"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@android:drawable/ic_menu_mylocation" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView29" />
+
+        <CheckBox
+            android:id="@+id/user_address_selected"
+            android:buttonTint="@color/button_babycare_normal"
+            app:layout_constraintTop_toBottomOf="@id/manual_address"
+            android:text="Use my address"
+            android:textAppearance="@style/TextBabyCare"
+            android:textColor="@color/button_babycare_normal"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
         <EditText
             android:id="@+id/calendarview"
@@ -62,7 +73,7 @@
             android:textColor="@color/form_black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView5"
-            app:layout_constraintTop_toBottomOf="@+id/manual_address" />
+            app:layout_constraintTop_toBottomOf="@+id/user_address_selected" />
 
         <EditText
             android:id="@+id/timeview"
@@ -113,7 +124,7 @@
             android:textAppearance="@style/TextBabyCare"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/manual_address" />
+            app:layout_constraintTop_toBottomOf="@+id/user_address_selected" />
 
         <TextView
             android:id="@+id/textView8"

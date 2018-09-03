@@ -23,6 +23,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.FrameLayout;
@@ -39,13 +40,20 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.lang.reflect.Executable;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
+
+import model.AppointmentStatus;
+import model.ProfileBs;
+import model.ProfilePar;
+import model.Reservation;
 
 
 public class SearchingActivity extends BaseActivity {
@@ -59,7 +67,7 @@ public class SearchingActivity extends BaseActivity {
     private Double lat, lng;
 
     private EditText manualAddress;
-    private ImageButton locator;
+    private CheckBox home_address;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +84,7 @@ public class SearchingActivity extends BaseActivity {
         timer2 = findViewById(R.id.timeview2);
         search = findViewById(R.id.search);
         manualAddress = findViewById(R.id.manual_address);
-        locator = findViewById(R.id.locator);
+        home_address = findViewById(R.id.user_address_selected);
         initialize();
     }
 
@@ -164,26 +172,57 @@ public class SearchingActivity extends BaseActivity {
                 Calendar endTime = Calendar.getInstance();
                 endTime.set(Calendar.HOUR, endingHourChosen);
                 endTime.set(Calendar.MINUTE, endingMinuteChosen);
-                //TODO robe da mandare al backend
 
                 //map things
                 try {
                     Geocoder g = new Geocoder(getApplicationContext());
-                    List<Address> a = g.getFromLocationName(manualAddress.getText().toString(), 1);
-                    if(a == null)
-                        throw new IllegalArgumentException("set a correct address");
+                    List<Address> a;
+                    if (home_address.isChecked()) {
+                        //HARDCODE
+                        String user_address = "milano, via spinoza";
+                        a = g.getFromLocationName(user_address, 1);
+                    }
+                    else if (manualAddress.getText().length() > 0) {
+                        a = g.getFromLocationName(manualAddress.getText().toString(), 1);
+                        if (a == null)
+                            throw new IllegalArgumentException("please, select an existing address");
+
+                    }
+                    else
+                        throw new NullPointerException("please, select an address");
 
                     lat = a.get(0).getLatitude();
                     lng = a.get(0).getLongitude();
+                    /*TODO backend elements:
+                     * date, startingHourChosen, startingMinuteChosen,
+                     * endingHourChosen, endingMinuteChosen, lat, lng
+                     *
+                     *
+                     * MI RITORNA UNA LISTA DI BABYSITTER, CHE A QUEL PUNTO, MANDO ALLA PROSSIMA ACTIVITY*/
+
+                    //INIZIO HARDCODING
+                    List<ProfileBs> bs = new ArrayList<>();
+                    bs.add(new ProfileBs("sbiribilla", "volante", "pic", "Milano, piazza leonardo", 5));
+                    bs.add(new ProfileBs("sbiribilla", "volante2", "pic", "Milano, via bonardi", 5));
+
+                    //FINE HARDCODING
+
                     Intent results = new Intent(getApplicationContext(), ResultMapActivity.class);
+                    results.putExtra("bs_list", (Serializable) bs);
                     results.putExtra("lat", lat.toString());
                     results.putExtra("lng", lng.toString());
+                    results.putExtra("start", startTime);
+                    results.putExtra("end", endTime);
+                    results.putExtra("date", date);
+
                     startActivity(results);
+                }
+                catch (IllegalArgumentException e) {
+                    Toast t =Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT);
+                    t.show();
                 }
                 catch (Exception e) {
                     e.printStackTrace();
-                    Toast t =Toast.makeText(getApplicationContext(), "please insert a valid address", Toast.LENGTH_SHORT);
-                    t.show();
                 }
 
             }
