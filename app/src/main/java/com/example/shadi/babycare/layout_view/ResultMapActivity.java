@@ -152,9 +152,9 @@ public class ResultMapActivity extends BaseActivity implements OnMapReadyCallbac
         Intent it = new Intent(getApplicationContext(), PopupBsInfoActivity.class);
         it.putExtra("profile", bs);
 
-        Reservation r = new Reservation(new LatLng(Double.parseDouble(lat), Double.parseDouble(lng)), start, end, date, new ProfilePar(), bs, AppointmentStatus.REQUESTED);
+       // Reservation r = new Reservation(new LatLng(Double.parseDouble(lat), Double.parseDouble(lng)), start, end, date, new ProfilePar(), bs, AppointmentStatus.REQUESTED);
 
-        it.putExtra("reservationData", r);
+       // it.putExtra("reservationData", r);
         startActivity(it);
 
         return true;
