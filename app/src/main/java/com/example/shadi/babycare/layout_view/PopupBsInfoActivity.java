@@ -72,7 +72,8 @@ public class PopupBsInfoActivity extends Activity {
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), ProfileBsFromParActivity.class);
+                Intent i = new Intent(getApplicationContext(), ReservingActivity.class);
+                startActivity(i);
                 //TODO bisogna aprire il profilo corretto
 
             }

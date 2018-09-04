@@ -1,4 +1,4 @@
-#Mon Sep 03 20:21:37 CEST 2018
+#Tue Sep 04 10:51:50 CEST 2018
 base.0=C\:\\Users\\giuli\\StudioProjects\\BabyCareApp\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.1=classes2.dex
 renamed.1=classes2.dex
