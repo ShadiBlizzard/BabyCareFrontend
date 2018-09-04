@@ -19,7 +19,7 @@
         android:theme="@style/BabyCare"
         tools:replace="android:label">
         <activity
-            android:name=".layout_view.SearchingActivity"
+            android:name=".layout_view.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/BabyCare">
             <intent-filter>
@@ -77,11 +77,10 @@
         <activity
             android:name=".layout_view.ReservationsListActivity"
             android:screenOrientation="portrait" />
-        <!--
-            <activity
+        <activity
             android:name=".layout_view.SearchingActivity"
             android:screenOrientation="portrait" />
-        -->
+
         <activity
             android:name=".layout_view.ReviewFormActivity"
             android:screenOrientation="portrait" />
