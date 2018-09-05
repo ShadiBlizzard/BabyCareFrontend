@@ -80,7 +80,6 @@
         <activity
             android:name=".layout_view.SearchingActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".layout_view.ReviewFormActivity"
             android:screenOrientation="portrait" />
@@ -123,7 +122,7 @@
         <activity
             android:name=".layout_view.ResRequestAnswerActivity"
             android:screenOrientation="portrait" />
-         <activity
+        <activity
             android:name=".layout_view.SetAvailabilityActivity"
             android:screenOrientation="portrait" />
         <activity
@@ -160,7 +159,8 @@
             android:name=".layout_view.PopupBsInfoActivity"
             android:screenOrientation="portrait"
             android:theme="@style/BabyCare.PopMe" />
-        <activity android:name=".layout_view.ReviewListActivity"></activity>
+        <activity android:name=".layout_view.ReviewListActivity" />
+        <activity android:name=".layout_view.MoneyAccountActivity"></activity>
     </application>
 
 </manifest>

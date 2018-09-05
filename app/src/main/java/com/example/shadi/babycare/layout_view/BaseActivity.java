@@ -14,6 +14,8 @@ import com.example.shadi.babycare.R;
 
 import java.util.Locale;
 
+import model.MoneyAccount;
+
 public class BaseActivity extends AppCompatActivity {
 
     private DrawerLayout mDrLayout;
@@ -64,6 +66,10 @@ public class BaseActivity extends AppCompatActivity {
                         //TODO PROFILE BASED ON USER ROLE
                         Intent profileCaller = new Intent(getApplicationContext(), ProfileParFromBsActivity.class);
                         startActivity(profileCaller);
+                        break;
+                    case R.id.nav_money:
+                        Intent moneyCaller = new Intent(getApplicationContext(), MoneyAccountActivity.class);
+                        startActivity(moneyCaller);
                         break;
                     case R.id.nav_logout:
                         //TODO LOGOUT MANAGING

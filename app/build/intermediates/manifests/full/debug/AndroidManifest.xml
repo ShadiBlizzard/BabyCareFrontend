@@ -29,7 +29,6 @@
         android:label="BabyCare"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/BabyCare" >
         <activity
             android:name="com.example.shadi.babycare.layout_view.MainActivity"
@@ -173,6 +172,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/BabyCare.PopMe" />
         <activity android:name="com.example.shadi.babycare.layout_view.ReviewListActivity" />
+        <activity android:name="com.example.shadi.babycare.layout_view.MoneyAccountActivity" />
 
         <service
             android:name="com.squareup.leakcanary.internal.HeapAnalyzerService"

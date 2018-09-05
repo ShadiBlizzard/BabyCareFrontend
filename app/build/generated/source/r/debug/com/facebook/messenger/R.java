@@ -105,18 +105,18 @@ public final class R {
         public static final int status_bar_notification_info_maxnum = 0x7f0a000d;
     }
     public static final class layout {
-        public static final int messenger_button_send_blue_large = 0x7f0c005a;
-        public static final int messenger_button_send_blue_round = 0x7f0c005b;
-        public static final int messenger_button_send_blue_small = 0x7f0c005c;
-        public static final int messenger_button_send_white_large = 0x7f0c005d;
-        public static final int messenger_button_send_white_round = 0x7f0c005e;
-        public static final int messenger_button_send_white_small = 0x7f0c005f;
-        public static final int notification_action = 0x7f0c0061;
-        public static final int notification_action_tombstone = 0x7f0c0062;
-        public static final int notification_template_custom_big = 0x7f0c0069;
-        public static final int notification_template_icon_group = 0x7f0c006a;
-        public static final int notification_template_part_chronometer = 0x7f0c006e;
-        public static final int notification_template_part_time = 0x7f0c006f;
+        public static final int messenger_button_send_blue_large = 0x7f0c005b;
+        public static final int messenger_button_send_blue_round = 0x7f0c005c;
+        public static final int messenger_button_send_blue_small = 0x7f0c005d;
+        public static final int messenger_button_send_white_large = 0x7f0c005e;
+        public static final int messenger_button_send_white_round = 0x7f0c005f;
+        public static final int messenger_button_send_white_small = 0x7f0c0060;
+        public static final int notification_action = 0x7f0c0062;
+        public static final int notification_action_tombstone = 0x7f0c0063;
+        public static final int notification_template_custom_big = 0x7f0c006a;
+        public static final int notification_template_icon_group = 0x7f0c006b;
+        public static final int notification_template_part_chronometer = 0x7f0c006f;
+        public static final int notification_template_part_time = 0x7f0c0070;
     }
     public static final class string {
         public static final int messenger_send_button_text = 0x7f0f006a;

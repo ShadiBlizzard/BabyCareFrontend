@@ -22,6 +22,11 @@
             android:id="@+id/nav_policy"
             android:icon="@drawable/policy_icon"
             android:title="@string/policy" />
+
+        <item
+            android:id="@+id/nav_money"
+            android:icon="@drawable/mny_icon"
+            android:title="@string/money"/>
         <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/logout_icon"
