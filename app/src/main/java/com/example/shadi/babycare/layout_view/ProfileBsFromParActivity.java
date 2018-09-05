@@ -9,6 +9,10 @@ import android.widget.Button;
 
 import com.example.shadi.babycare.R;
 
+import java.util.ArrayList;
+
+import model.Review;
+
 public class ProfileBsFromParActivity extends ProfileParFromBsActivity {
 
     private Button askapp, reviews;
@@ -34,7 +38,13 @@ public class ProfileBsFromParActivity extends ProfileParFromBsActivity {
         reviews.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //TODO HARDCODE
+                ArrayList<Review> obj = new ArrayList<>();
+                obj.add(new Review(2.5f, "rev1", "babys1", "sbiribillo volante"));
+                obj.add(new Review(3f, "rev2", "babys1", "sbiribillo volante"));
+
                 Intent it = new Intent(getApplicationContext(), ReviewListActivity.class);
+                it.putExtra("reviews", obj);
                 startActivity(it);
             }
         });

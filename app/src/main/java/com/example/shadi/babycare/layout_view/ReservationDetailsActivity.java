@@ -1,6 +1,9 @@
 package com.example.shadi.babycare.layout_view;
 
+import android.location.Address;
+import android.location.Geocoder;
 import android.support.annotation.IdRes;
+import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
 import android.support.constraint.ConstraintSet;
 import android.support.v7.app.AppCompatActivity;
@@ -11,14 +14,20 @@ import android.widget.TextView;
 
 import com.example.shadi.babycare.R;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import model.Reservation;
+
 public class ReservationDetailsActivity extends BaseActivity {
 
     private TextView status, name1, name2, timestamp, address;
     private ConstraintLayout cl;
+    private Reservation res;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //TODO backend call per dettagli reservation
         super.onCreate(savedInstanceState);
         FrameLayout fl = findViewById(R.id.content_frame);
         getLayoutInflater().inflate(R.layout.activity_reservation_details, fl);
@@ -32,10 +41,28 @@ public class ReservationDetailsActivity extends BaseActivity {
 
         super.setTitle("Reservation details");
 
-        detailsByStatus();
+        res = (Reservation) getIntent().getSerializableExtra("res");
+
     }
 
-    private void detailsByStatus() {
+    @Override
+    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        status.setText(res.getStatus().toString());
+        name1.setText(res.getPa().getName());
+        name2.setText(res.getBs().getName());
+        timestamp.setText(res.getWhen().toString());
+
+        Geocoder g = new Geocoder(this);
+        List<Address> a = new ArrayList<>();
+        try {
+            a = g.getFromLocation(res.getWhere().latitude, res.getWhere().longitude, 1);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        address.setText(a.get(0).getLocality());
+
         String stat = status.getText().toString();
         //setting the opt button dynamically
         Button opt = new Button(getApplicationContext());
@@ -50,10 +77,8 @@ public class ReservationDetailsActivity extends BaseActivity {
 
         if(stat.equals("ACCEPTED"))
             opt.setText("CANCEL");
-
-        //TODO impostazione tasto in base a stato reservation
-
-
     }
+
+
 }
 

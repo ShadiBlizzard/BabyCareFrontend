@@ -1,19 +1,29 @@
 package model;
 
-public class Message {
+import com.google.android.gms.maps.model.LatLng;
 
-    private String timestamp, sender;
+import java.io.Serializable;
+import java.util.Calendar;
 
-    public  Message (String timestamp, String sender) {
-        this.sender = sender;
-        this.timestamp = timestamp;
+public class Message implements Serializable{
+
+    private Calendar timestamp = Calendar.getInstance();
+    private String txt ="ambarabaciccicocco";
+    private Reservation res = new Reservation(new LatLng(4.0, 4.0), Calendar.getInstance(), Calendar.getInstance(), Calendar.getInstance(), new Uzer("mozzarella", "volante", "pic", "Milano, piazza leonardo", 5), new Uzer("sbiribilla", "volante", "pic", "Milano, piazza leonardo", 5), AppointmentStatus.REQUESTED);
+
+
+    public  Message () {
     }
 
-    public String getTimestamp() {
+    public Calendar getTimestamp() {
         return timestamp;
     }
 
-    public String getSender() {
-        return sender;
+    public Reservation getRes() {
+        return res;
+    }
+
+    public String getTxt() {
+        return txt;
     }
 }

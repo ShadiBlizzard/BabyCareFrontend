@@ -11,10 +11,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import com.example.shadi.babycare.R;
+import com.google.android.gms.maps.model.LatLng;
 
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Locale;
 
+import model.AppointmentStatus;
+import model.Message;
 import model.MoneyAccount;
+import model.Reservation;
+import model.Uzer;
 
 public class BaseActivity extends AppCompatActivity {
 
@@ -52,10 +59,24 @@ public class BaseActivity extends AppCompatActivity {
                         break;
                     case R.id.nav_reservations:
                         Intent resCaller = new Intent(getApplicationContext(), ReservationsListActivity.class);
+
+                        //TODO BACKEND RETRIEVE RESERVATIONS
+                        ArrayList<Reservation> res = new ArrayList<>();
+                        res.add(new Reservation(new LatLng(45.4642035, 9.186515999999983), Calendar.getInstance(),
+                                Calendar.getInstance(), Calendar.getInstance(),
+                                new Uzer("mozzarella", "volante", "pic", "Milano, piazza leonardo", 5), new Uzer("name", "surname", "pic", "milano piazza duomo", 3), AppointmentStatus.REQUESTED));
+                        resCaller.putExtra("reservations", res);
                         startActivity(resCaller);
                         break;
                     case R.id.nav_messages:
                         Intent msgCaller = new Intent(getApplicationContext(), MessagesListActivity.class);
+                        //TODO BACKEND RETRIEVE MESSAGES
+                        ArrayList<Message> obj = new ArrayList<>();
+                        obj.add(new Message());
+                        obj.add(new Message());
+                        obj.add(new Message());
+
+                        msgCaller.putExtra("messages", obj);
                         startActivity(msgCaller);
                         break;
                     case R.id.nav_policy:

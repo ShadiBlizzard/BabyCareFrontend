@@ -11,7 +11,7 @@ import com.example.shadi.babycare.R;
 
 public class ProfileParFromParActivity extends ProfileParFromBsActivity {
 
-    private Button update;
+    private Button update, payment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +22,7 @@ public class ProfileParFromParActivity extends ProfileParFromBsActivity {
         nv.getMenu().getItem(3).setChecked(true);
 
         update = findViewById(R.id.update_profile);
+        payment = findViewById(R.id.set_payment);
 
         update.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,5 +31,14 @@ public class ProfileParFromParActivity extends ProfileParFromBsActivity {
                 startActivity(i);
             }
         });
+
+        payment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), CreditCardActivity.class);
+                startActivity(i);
+            }
+        });
+
     }
 }

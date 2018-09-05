@@ -8,6 +8,15 @@ import android.view.View;
 import android.widget.FrameLayout;
 
 import com.example.shadi.babycare.R;
+import com.google.android.gms.maps.model.LatLng;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+
+import model.AppointmentStatus;
+import model.Message;
+import model.Reservation;
+import model.Uzer;
 
 public class HomeActivity extends BaseActivity {
 
@@ -30,7 +39,14 @@ public class HomeActivity extends BaseActivity {
         res_cons.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                //TODO RETRIEVE RES
                 Intent it = new Intent(getApplicationContext(), ReservationsListActivity.class);
+                ArrayList<Reservation> res = new ArrayList<>();
+                res.add(new Reservation(new LatLng(45.4642035, 9.186515999999983), Calendar.getInstance(),
+                        Calendar.getInstance(), Calendar.getInstance(),
+                        new Uzer("mozzarella", "volante", "pic", "Milano, piazza leonardo", 5), new Uzer("name", "surname", "pic", "milano piazza duomo", 3), AppointmentStatus.REQUESTED));
+                it.putExtra("reservations", res);
                 startActivity(it);
             }
         });
@@ -38,7 +54,14 @@ public class HomeActivity extends BaseActivity {
         mes_cons.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //TODO RETRIEVE MESS
                 Intent it = new Intent(getApplicationContext(), MessagesListActivity.class);
+                ArrayList<Message> obj = new ArrayList<>();
+                obj.add(new Message());
+                obj.add(new Message());
+                obj.add(new Message());
+
+                it.putExtra("messages", obj);
                 startActivity(it);
             }
         });

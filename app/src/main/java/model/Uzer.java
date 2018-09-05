@@ -8,6 +8,7 @@ public class Uzer implements Serializable {
     private String name, surname, pic, address;
     private float rating;
     private double hourlyPrice=10.50;
+    private Role role;
 
     public Uzer(String name, String surname, String pic, String address, float rating) {
         this.name=name;
@@ -40,5 +41,13 @@ public class Uzer implements Serializable {
 
     public double getHourlyPrice() {
         return hourlyPrice;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
     }
 }

@@ -11,7 +11,7 @@ import com.example.shadi.babycare.R;
 
 public class ProfileBsFromBsActivity extends ProfileParFromBsActivity {
 
-    private Button update, reviews, availabilities;
+    private Button update, reviews, availabilities, payment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +23,7 @@ public class ProfileBsFromBsActivity extends ProfileParFromBsActivity {
         update = findViewById(R.id.update_profile);
         reviews = findViewById(R.id.see_reviews);
         availabilities = findViewById(R.id.set_availabilities);
+        payment = findViewById(R.id.set_payment);
 
         update.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +46,14 @@ public class ProfileBsFromBsActivity extends ProfileParFromBsActivity {
             public void onClick(View view) {
                 Intent it = new Intent(getApplicationContext(), SetAvailabilityActivity.class);
                 startActivity(it);
+            }
+        });
+
+        payment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), CreditCardActivity.class);
+                startActivity(i);
             }
         });
 

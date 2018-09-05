@@ -1,5 +1,6 @@
 package com.example.shadi.babycare.layout_view;
 
+import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,6 +20,7 @@ public class MessagesListActivity extends BaseActivity {
 
     private ListView listView;
     private MessageAdapter msg;
+    private ArrayList<Message> obj;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,28 +33,23 @@ public class MessagesListActivity extends BaseActivity {
 
         super.setTitle("Your inbox");
         listView = findViewById(R.id.msg_list);
+        Intent i = getIntent();
+        obj = (ArrayList<Message>) i.getSerializableExtra("messages");
         listCreation();
     }
 
     public void listCreation () {
-        //TODO BACKEND CALL
-        //temporaneous hardcoding
-        ArrayList<Message> obj = new ArrayList<>();
-        obj.add(new Message("sender1", "timestamp1"));
-        obj.add(new Message("sender2", "timestamp2"));
-        obj.add(new Message("sender3", "timestamp3"));
-        obj.add(new Message("sender4", "timestamp4"));
-        obj.add(new Message("sender5", "timestamp5"));
-        obj.add(new Message("sender6", "timestamp6"));
-        obj.add(new Message("sender7", "timestamp7"));
 
         msg = new MessageAdapter(this, obj );
         listView.setAdapter(msg);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //TODO when the user clicks an item, we will open the message activity and
-                //populate it with message data
+                //se è parent ResRequestAnswer
+                //TODO CHECKING RUOLO
+                Intent i = new Intent(getApplicationContext(), ResRequestActivity.class);
+                i.putExtra("message", obj.get(position));
+                startActivity(i);
             }
         });
     }

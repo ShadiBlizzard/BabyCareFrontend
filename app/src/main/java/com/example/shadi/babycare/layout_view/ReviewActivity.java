@@ -1,5 +1,6 @@
 package com.example.shadi.babycare.layout_view;
 
+import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,14 +10,16 @@ import android.widget.TextView;
 
 import com.example.shadi.babycare.R;
 
+import model.Review;
+
 public class ReviewActivity extends BaseActivity {
 
     private TextView bs, rw, title, text;
     private RatingBar rating;
+    private Review review;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //TODO dettagli review
         super.onCreate(savedInstanceState);
         //this is needed in order to have the drawer in all activities
         FrameLayout fl = findViewById(R.id.content_frame);
@@ -29,6 +32,9 @@ public class ReviewActivity extends BaseActivity {
         title = findViewById(R.id.review_detail_title);
         text = findViewById(R.id.review_detail_txt);
         rating = findViewById(R.id.review_detail_rating);
+
+        Intent i = getIntent();
+        review = (Review) i.getSerializableExtra("review");
 
 
     }

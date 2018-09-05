@@ -7,7 +7,7 @@ import java.util.Calendar;
 
 public class Payment implements Serializable{
 
-    private Reservation appointment = new Reservation(new LatLng(4.0, 4.0), Calendar.getInstance(), Calendar.getInstance(), Calendar.getInstance(), new ProfilePar(), new Uzer("sbiribilla", "volante", "pic", "Milano, piazza leonardo", 5), AppointmentStatus.REQUESTED);;
+    private Reservation appointment = new Reservation(new LatLng(4.0, 4.0), Calendar.getInstance(), Calendar.getInstance(), Calendar.getInstance(), new Uzer("mozzarella", "volante", "pic", "Milano, piazza leonardo", 5), new Uzer("sbiribilla", "volante", "pic", "Milano, piazza leonardo", 5), AppointmentStatus.REQUESTED);
     private Calendar creationDate = Calendar.getInstance();
     private Double amount=3.0;
     private String id="1234567890";

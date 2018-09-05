@@ -1,15 +1,27 @@
 package com.example.shadi.babycare.layout_view;
 
+import android.location.Address;
+import android.location.Geocoder;
+import android.os.PersistableBundle;
+import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.os.Bundle;
+import android.widget.Adapter;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.example.shadi.babycare.R;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import model.Message;
+
 public class ResRequestActivity extends BaseActivity {
     private TextView timestamp, sender, text, from, to, date, location;
+    private Message m;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +33,8 @@ public class ResRequestActivity extends BaseActivity {
         nv.getMenu().getItem(1).setChecked(true);
         super.setTitle("Message");
 
+        m = (Message) getIntent().getSerializableExtra("message");
+
         timestamp = findViewById(R.id.res_msg_id);
         sender = findViewById(R.id.res_msg_by);
         text = findViewById(R.id.res_msg_content);
@@ -28,6 +42,32 @@ public class ResRequestActivity extends BaseActivity {
         from = findViewById(R.id.res_msg_from);
         to = findViewById(R.id.res_msg_to);
         location = findViewById(R.id.res_msg_loc);
+
+    }
+
+    @Override
+    public void onPostCreate(@Nullable Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+
+        timestamp.setText(m.getTimestamp().toString());
+        sender.setText(m.getRes().getPa().getName());
+        text.setText(m.getTxt());
+        date.setText(m.getRes().getWhen().toString());
+        from.setText(m.getRes().getStart().toString());
+        to.setText(m.getRes().getEnd().toString());
+
+        Geocoder g = new Geocoder(this);
+        List<Address> a = new ArrayList<>();
+        try {
+           a = g.getFromLocation(m.getRes().getWhere().latitude, m.getRes().getWhere().longitude, 1);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        location.setText(a.get(0).getLocality());
+
+
+
 
     }
 }

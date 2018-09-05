@@ -1,6 +1,7 @@
 package com.example.shadi.babycare.layout_view;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -19,6 +20,7 @@ public class ReviewListActivity extends BaseActivity {
 
     private ListView listView;
     private ReviewAdapter reviewAdapter;
+    private ArrayList<Review> obj;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,27 +35,22 @@ public class ReviewListActivity extends BaseActivity {
         super.setTitle("Reviews");
 
         listView = findViewById(R.id.review_list);
+
+        Intent i = getIntent();
+        obj = (ArrayList<Review>) i.getSerializableExtra("reviews");
         listInitialization();
     }
 
     private void listInitialization() {
-        //temporaneous hardcoding
-        ArrayList<Review> obj = new ArrayList<>();
-        obj.add(new Review(2.5f, "rev1", "babys1", "sbiribillo volante"));
-        obj.add(new Review(3f, "rev2", "babys1", "sbiribillo volante"));
-        obj.add(new Review(3f, "rev3", "babys1", "sbiribillo volante"));
-        obj.add(new Review(2.5f, "rev4", "babys1", "sbiribillo volante"));
-        obj.add(new Review(2.5f, "rev5", "babys1", "sbiribillo volante"));
-        obj.add(new Review(2.5f, "rev6", "babys1", "sbiribillo volante"));
-        obj.add(new Review(2.5f, "rev7", "babys1", "sbiribillo volante"));
-        obj.add(new Review(2.5f, "rev8", "babys1", "sbiribillo volante"));
 
         reviewAdapter = new ReviewAdapter(this, obj);
         listView.setAdapter(reviewAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //TODO manda ad una determinata review
+                Intent i = new Intent(getApplicationContext(), ReviewActivity.class);
+                i.putExtra("review", obj.get(position));
+                startActivity(i);
             }
         });
 
