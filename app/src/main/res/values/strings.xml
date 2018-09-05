@@ -3,7 +3,7 @@
     <string name="home">HOME</string>
     <string name="messages">NOTIFICATIONS</string>
     <string name="reservations">RESERVATIONS</string>
-    <string name="invite">INVITE</string>
+    <string name="payment">PAYMENTS</string>
     <string name="profile">PROFILE</string>
     <string name="money">MONEY ACCOUNT</string>
     <string name="policy">POLICY</string>

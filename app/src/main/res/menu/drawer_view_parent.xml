@@ -25,8 +25,12 @@
 
         <item
             android:id="@+id/nav_money"
-            android:icon="@drawable/mny_icon"
+            android:icon="@drawable/pay_icon"
             android:title="@string/money"/>
+        <item
+            android:id="@+id/nav_payments"
+            android:icon="@drawable/mny_icon"
+            android:title="@string/payment"/>
         <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/logout_icon"

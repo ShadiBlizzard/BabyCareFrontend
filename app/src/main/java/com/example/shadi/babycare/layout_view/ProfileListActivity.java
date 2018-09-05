@@ -12,7 +12,7 @@ import com.example.shadi.babycare.R;
 import java.util.ArrayList;
 
 import adapters.ProfileAdapter;
-import model.ProfileBs;
+import model.Uzer;
 
 public class ProfileListActivity extends BaseActivity {
 
@@ -35,17 +35,17 @@ public class ProfileListActivity extends BaseActivity {
     }
 
     private void listCreation() {
-        ArrayList<ProfileBs> bs= new ArrayList<>();
+        ArrayList<Uzer> bs= new ArrayList<>();
 
-        bs.add(new ProfileBs("Sbiribilla", "Volante", "pic", "via tot", 0.6f));
-        bs.add(new ProfileBs("Sbiribilla", "Volante", "pic", "via tot", 0.6f));
-        bs.add(new ProfileBs("Sbiribilla", "Volante", "pic", "via tot", 0.6f));
-        bs.add(new ProfileBs("Sbiribilla", "Volante", "pic", "via tot", 0.6f));
-        bs.add(new ProfileBs("Sbiribilla", "Volante", "pic", "via tot", 0.6f));
-        bs.add(new ProfileBs("Sbiribilla", "Volante", "pic", "via tot", 0.6f));
-        bs.add(new ProfileBs("Sbiribilla", "Volante", "pic", "via tot", 0.6f));
-        bs.add(new ProfileBs("Sbiribilla", "Volante", "pic", "via tot", 0.6f));
-        bs.add(new ProfileBs("Sbiribilla", "Volante", "pic", "via tot", 0.6f));
+        bs.add(new Uzer("Sbiribilla", "Volante", "pic", "via tot", 0.6f));
+        bs.add(new Uzer("Sbiribilla", "Volante", "pic", "via tot", 0.6f));
+        bs.add(new Uzer("Sbiribilla", "Volante", "pic", "via tot", 0.6f));
+        bs.add(new Uzer("Sbiribilla", "Volante", "pic", "via tot", 0.6f));
+        bs.add(new Uzer("Sbiribilla", "Volante", "pic", "via tot", 0.6f));
+        bs.add(new Uzer("Sbiribilla", "Volante", "pic", "via tot", 0.6f));
+        bs.add(new Uzer("Sbiribilla", "Volante", "pic", "via tot", 0.6f));
+        bs.add(new Uzer("Sbiribilla", "Volante", "pic", "via tot", 0.6f));
+        bs.add(new Uzer("Sbiribilla", "Volante", "pic", "via tot", 0.6f));
 
         if (bs.isEmpty()) {
             txt.setText("No results found");

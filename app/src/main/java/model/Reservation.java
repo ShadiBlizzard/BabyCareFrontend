@@ -9,13 +9,13 @@ import java.util.Calendar;
 public class Reservation implements Serializable{
 
     private Calendar start, end, when;
-    private ProfileBs bs;
+    private Uzer bs;
     private ProfilePar pa;
     private LatLng where;
     private AppointmentStatus status;
 
 
-    public Reservation(LatLng where, Calendar start, Calendar end, Calendar when, ProfilePar parent, ProfileBs babysitter, AppointmentStatus status) {
+    public Reservation(LatLng where, Calendar start, Calendar end, Calendar when, ProfilePar parent, Uzer babysitter, AppointmentStatus status) {
         this.start = start;
         this.end = end;
         this.when = when;
@@ -48,7 +48,7 @@ public class Reservation implements Serializable{
     public LatLng getWhere() {
         return where;
     }
-    public ProfileBs getBs() {
+    public Uzer getBs() {
         return bs;
     }
 

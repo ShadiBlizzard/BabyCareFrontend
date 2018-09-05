@@ -3,7 +3,6 @@ import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
-import android.provider.Telephony;
 import android.support.v4.app.FragmentManager;
 import android.widget.FrameLayout;
 
@@ -21,17 +20,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-import java.util.Locale;
 
-import model.AppointmentStatus;
-import model.ProfileBs;
-import model.ProfilePar;
-import model.Reservation;
+import model.Uzer;
 
 public class ResultMapActivity extends BaseActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener{
 
     private MapsFragment mf;
-    private List<ProfileBs> bs = new ArrayList<>(), convertedTags=new ArrayList<>();
+    private List<Uzer> bs = new ArrayList<>(), convertedTags=new ArrayList<>();
     private Geocoder geocoder;
     private Calendar date, start, end;
     private String lat;
@@ -43,7 +38,7 @@ public class ResultMapActivity extends BaseActivity implements OnMapReadyCallbac
         Intent i = getIntent();
         lat = i.getStringExtra("lat");
         lng = i.getStringExtra("lng");
-        bs = (List<ProfileBs>) i.getSerializableExtra("bs_list");
+        bs = (List<Uzer>) i.getSerializableExtra("bs_list");
 
         //date and time of reservation
         date= (Calendar) i.getSerializableExtra("date");
@@ -78,7 +73,7 @@ public class ResultMapActivity extends BaseActivity implements OnMapReadyCallbac
 
         for (int i = 0; i<bs.size(); i++) {
             List<Address> temp;
-            ProfileBs currentBs = bs.get(i);
+            Uzer currentBs = bs.get(i);
             try {
                 temp = geocoder.getFromLocationName(currentBs.getAddress(), 1);
                 if(temp == null) {
@@ -134,7 +129,7 @@ public class ResultMapActivity extends BaseActivity implements OnMapReadyCallbac
         Double latiM = coordinates.latitude;
         Double longiM = coordinates.longitude;
 
-        ProfileBs bs = null;
+        Uzer bs = null;
         //looking for the correct bs
         for (int i = 0; i< convertedTags.size(); i++) {
             String coord = convertedTags.get(i).getAddress();

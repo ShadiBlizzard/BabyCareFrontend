@@ -14,15 +14,15 @@ import com.example.shadi.babycare.R;
 import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
-import model.ProfileBs;
+import model.Uzer;
 
 public class ProfileAdapter extends BaseAdapter {
 
     Activity context;
-    ArrayList<ProfileBs> bs;
+    ArrayList<Uzer> bs;
     private static LayoutInflater inflater= null;
 
-    public ProfileAdapter(Activity context, ArrayList<ProfileBs> list) {
+    public ProfileAdapter(Activity context, ArrayList<Uzer> list) {
         this.context=context;
         this.bs=list;
         this.inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -34,7 +34,7 @@ public class ProfileAdapter extends BaseAdapter {
     }
 
     @Override
-    public ProfileBs getItem(int position) {
+    public Uzer getItem(int position) {
         return bs.get(position);
     }
 
@@ -52,7 +52,7 @@ public class ProfileAdapter extends BaseAdapter {
         RatingBar ratingBar = (RatingBar) itemView.findViewById(R.id.profile_rating);
         CircleImageView circleImageView = (CircleImageView) itemView.findViewById(R.id.profile_pic);
 
-        ProfileBs sel_bs = bs.get(position);
+        Uzer sel_bs = bs.get(position);
         namesurname.setText(sel_bs.getName()+ " " + sel_bs.getSurname());
         ratingBar.setRating(sel_bs.getRating());
          //TODO profile pic per ora default

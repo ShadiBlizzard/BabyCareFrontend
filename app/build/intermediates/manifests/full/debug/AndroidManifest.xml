@@ -173,6 +173,7 @@
             android:theme="@style/BabyCare.PopMe" />
         <activity android:name="com.example.shadi.babycare.layout_view.ReviewListActivity" />
         <activity android:name="com.example.shadi.babycare.layout_view.MoneyAccountActivity" />
+        <activity android:name="com.example.shadi.babycare.layout_view.PaymentListActivity" />
 
         <service
             android:name="com.squareup.leakcanary.internal.HeapAnalyzerService"

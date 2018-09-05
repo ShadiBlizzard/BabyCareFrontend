@@ -1,5 +1,6 @@
 package com.example.shadi.babycare.layout_view;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
@@ -16,6 +17,9 @@ public class MoneyAccountActivity extends BaseActivity {
         FrameLayout fl = findViewById(R.id.content_frame);
         getLayoutInflater().inflate(R.layout.activity_money_account, fl);
         super.setTitle("Money Account");
+
+        NavigationView nv = findViewById(R.id.nav_view);
+        nv.getMenu().getItem(5).setChecked(true);
 
         actual = findViewById(R.id.money_amount);
         pending = findViewById(R.id.money_pending);

@@ -1,25 +1,10 @@
 package com.example.shadi.babycare.layout_view;
 
-import android.Manifest;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
-import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
-import android.os.AsyncTask;
-import android.os.Build;
-import android.os.PersistableBundle;
-import android.provider.Settings;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.widget.NavigationView;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -27,33 +12,17 @@ import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.FrameLayout;
-import android.widget.ImageButton;
-import android.widget.RelativeLayout;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.example.shadi.babycare.R;
-import com.google.android.gms.maps.MapView;
-import com.google.android.gms.maps.model.LatLng;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.Serializable;
-import java.lang.reflect.Executable;
-import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.List;
 
-import model.AppointmentStatus;
-import model.ProfileBs;
-import model.ProfilePar;
-import model.Reservation;
+import model.Uzer;
 
 
 public class SearchingActivity extends BaseActivity {
@@ -201,9 +170,9 @@ public class SearchingActivity extends BaseActivity {
                      * MI RITORNA UNA LISTA DI BABYSITTER, CHE A QUEL PUNTO, MANDO ALLA PROSSIMA ACTIVITY*/
 
                     //INIZIO HARDCODING
-                    List<ProfileBs> bs = new ArrayList<>();
-                    bs.add(new ProfileBs("sbiribilla", "volante", "pic", "Milano, piazza leonardo", 5));
-                    bs.add(new ProfileBs("sbiribilla", "volante2", "pic", "Milano, via bonardi", 5));
+                    List<Uzer> bs = new ArrayList<>();
+                    bs.add(new Uzer("sbiribilla", "volante", "pic", "Milano, piazza leonardo", 5));
+                    bs.add(new Uzer("sbiribilla", "volante2", "pic", "Milano, via bonardi", 5));
 
                     //FINE HARDCODING
 

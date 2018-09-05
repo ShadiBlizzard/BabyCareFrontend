@@ -1,8 +1,6 @@
 package com.example.shadi.babycare.layout_view;
 
-import android.location.Geocoder;
 import android.support.design.widget.NavigationView;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -18,7 +16,7 @@ import java.util.Calendar;
 
 import adapters.ReservationAdapter;
 import model.AppointmentStatus;
-import model.ProfileBs;
+import model.Uzer;
 import model.ProfilePar;
 import model.Reservation;
 
@@ -49,7 +47,7 @@ public class ReservationsListActivity extends BaseActivity {
     private void listCreation() throws IOException {
         //temporaneous hardcoding
         ArrayList<Reservation> res = new ArrayList<>();
-        res.add(new Reservation(new LatLng(45.4642035, 9.186515999999983),Calendar.getInstance(), Calendar.getInstance(), Calendar.getInstance(), new ProfilePar(), new ProfileBs("name", "surname", "pic", "milano piazza duomo", 3), AppointmentStatus.REQUESTED));
+        res.add(new Reservation(new LatLng(45.4642035, 9.186515999999983),Calendar.getInstance(), Calendar.getInstance(), Calendar.getInstance(), new ProfilePar(), new Uzer("name", "surname", "pic", "milano piazza duomo", 3), AppointmentStatus.REQUESTED));
 
 
         resAdp = new ReservationAdapter(this, res);

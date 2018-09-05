@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/button_babycare_disabled"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/payment_timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="TIMESTAMP"
+            android:textColor="@color/button_babycare_normal"
+            android:textAppearance="@style/TextBabyCare"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/payment_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="status"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextBabyCare"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/payment_timestamp" />
+
+        <TextView
+            android:id="@+id/payment_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:paddingRight="3dp"
+            android:gravity="right"
+            android:text="amount"
+            android:textAppearance="@style/TextBabyCare"
+            android:textSize="25dp"
+            android:textColor="@color/button_babycare_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/payment_status"
+            app:layout_constraintTop_toBottomOf="@+id/payment_timestamp" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>

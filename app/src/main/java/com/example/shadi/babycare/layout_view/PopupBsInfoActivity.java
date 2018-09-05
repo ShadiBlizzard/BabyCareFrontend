@@ -3,7 +3,6 @@ package com.example.shadi.babycare.layout_view;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.View;
@@ -14,21 +13,21 @@ import android.widget.TextView;
 
 import com.example.shadi.babycare.R;
 
-import model.ProfileBs;
+import model.Uzer;
 
 public class PopupBsInfoActivity extends Activity {
 
     private TextView name, surname, hourlyCost;
     private RatingBar rating;
     private Button profile, close;
-    private ProfileBs bs;
+    private Uzer bs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_popup_bs_info);
         Intent i = getIntent();
-        bs = (ProfileBs) i.getSerializableExtra("profile");
+        bs = (Uzer) i.getSerializableExtra("profile");
 
 
         name = findViewById(R.id.popup_bsname);
