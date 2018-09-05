@@ -175,6 +175,7 @@
         <activity android:name="com.example.shadi.babycare.layout_view.MoneyAccountActivity" />
         <activity android:name="com.example.shadi.babycare.layout_view.PaymentListActivity" />
         <activity android:name="com.example.shadi.babycare.layout_view.PaymentActivity" />
+        <activity android:name="com.example.shadi.babycare.layout_view.CreditCardActivity" />
 
         <service
             android:name="com.squareup.leakcanary.internal.HeapAnalyzerService"

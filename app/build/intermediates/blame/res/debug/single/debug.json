@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\giuli\\StudioProjects\\BabyCareApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
-        "source": "C:\\Users\\giuli\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0-alpha1.aar\\e5811e7fc6998530222c90d247b87eb6\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
-    },
-    {
         "merged": "C:\\Users\\giuli\\StudioProjects\\BabyCareApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_messenger_button_blue_bg_round.xml.flat",
         "source": "C:\\Users\\giuli\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.35.0.aar\\bc5cca4a40dca96a75e7f453bb888434\\res\\drawable\\messenger_button_blue_bg_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\giuli\\StudioProjects\\BabyCareApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
+        "source": "C:\\Users\\giuli\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0-alpha1.aar\\e5811e7fc6998530222c90d247b87eb6\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
         "merged": "C:\\Users\\giuli\\StudioProjects\\BabyCareApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_list_menu_item_icon.xml.flat",
@@ -48,12 +48,12 @@
         "source": "C:\\Users\\giuli\\StudioProjects\\BabyCareApp\\app\\src\\main\\res\\layout\\activity_profile_list.xml"
     },
     {
-        "merged": "C:\\Users\\giuli\\StudioProjects\\BabyCareApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_screen_simple_overlay_action_mode.xml.flat",
-        "source": "C:\\Users\\giuli\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0-alpha1.aar\\e5811e7fc6998530222c90d247b87eb6\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
-    },
-    {
         "merged": "C:\\Users\\giuli\\StudioProjects\\BabyCareApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
         "source": "C:\\Users\\giuli\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0-alpha1.aar\\e5811e7fc6998530222c90d247b87eb6\\res\\drawable-xxxhdpi-v4\\abc_ic_star_half_black_48dp.png"
+    },
+    {
+        "merged": "C:\\Users\\giuli\\StudioProjects\\BabyCareApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_screen_simple_overlay_action_mode.xml.flat",
+        "source": "C:\\Users\\giuli\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0-alpha1.aar\\e5811e7fc6998530222c90d247b87eb6\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
     {
         "merged": "C:\\Users\\giuli\\StudioProjects\\BabyCareApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_design_snackbar_background.xml.flat",
@@ -226,6 +226,10 @@
     {
         "merged": "C:\\Users\\giuli\\StudioProjects\\BabyCareApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_ok.xml.flat",
         "source": "C:\\Users\\giuli\\StudioProjects\\BabyCareApp\\app\\src\\main\\res\\layout\\activity_ok.xml"
+    },
+    {
+        "merged": "C:\\Users\\giuli\\StudioProjects\\BabyCareApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_credit_card.xml.flat",
+        "source": "C:\\Users\\giuli\\StudioProjects\\BabyCareApp\\app\\src\\main\\res\\layout\\activity_credit_card.xml"
     },
     {
         "merged": "C:\\Users\\giuli\\StudioProjects\\BabyCareApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_cab_background_top_material.xml.flat",

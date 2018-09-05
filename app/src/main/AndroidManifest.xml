@@ -162,7 +162,8 @@
         <activity android:name=".layout_view.ReviewListActivity" />
         <activity android:name=".layout_view.MoneyAccountActivity" />
         <activity android:name=".layout_view.PaymentListActivity" />
-        <activity android:name=".layout_view.PaymentActivity"></activity>
+        <activity android:name=".layout_view.PaymentActivity" />
+        <activity android:name=".layout_view.CreditCardActivity"></activity>
     </application>
 
 </manifest>

@@ -48,7 +48,8 @@ public class Register3Activity extends AppCompatActivity {
         district.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                item1 = (CharSequence) parent.getItemAtPosition(position);
+                if (position != 0)
+                  item1 = (CharSequence) parent.getItemAtPosition(position);
             }
 
             @Override
@@ -61,7 +62,8 @@ public class Register3Activity extends AppCompatActivity {
         neighborhood.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                item2 = (CharSequence) parent.getItemAtPosition(position);
+                if (position!= 0)
+                    item2 = (CharSequence) parent.getItemAtPosition(position);
             }
 
             @Override
