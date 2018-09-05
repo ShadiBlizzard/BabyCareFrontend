@@ -32,7 +32,7 @@
         android:testOnly="true"
         android:theme="@style/BabyCare" >
         <activity
-            android:name="com.example.shadi.babycare.layout_view.SearchingActivity"
+            android:name="com.example.shadi.babycare.layout_view.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/BabyCare" >
             <intent-filter>
@@ -90,11 +90,9 @@
         <activity
             android:name="com.example.shadi.babycare.layout_view.ReservationsListActivity"
             android:screenOrientation="portrait" />
-        <!--
-            <activity
-            android:name=".layout_view.SearchingActivity"
+        <activity
+            android:name="com.example.shadi.babycare.layout_view.SearchingActivity"
             android:screenOrientation="portrait" />
-        -->
         <activity
             android:name="com.example.shadi.babycare.layout_view.ReviewFormActivity"
             android:screenOrientation="portrait" />

@@ -12,6 +12,7 @@ import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.example.shadi.babycare.R;
 
@@ -39,6 +40,7 @@ public class SetAvailabilityActivity extends BaseActivity {
 
 
         calendar = findViewById(R.id.set_calendar);
+        send = findViewById(R.id.send_avail);
 
         //checkbox handler
         predefined= findViewById(R.id.period_pred1);
@@ -116,7 +118,7 @@ public class SetAvailabilityActivity extends BaseActivity {
 
         //FIRST: I check the predefined period
         if (predefined.isChecked()) {
-            sendAvailability(0, 24);
+            sendAvailability(0, 24, true);
             hours.clear();
         }
 
@@ -134,14 +136,14 @@ public class SetAvailabilityActivity extends BaseActivity {
                     //if the following checkbox is checked, update the end time to that of the following
                     if (!hours.get(keyList.get(i + 1))) {
                         tempEnd = i + 1;
-                        sendAvailability(tempStart, tempEnd);
+                        sendAvailability(tempStart, tempEnd, false);
                         tempStart = -1;
                     }
                 }
                 //if I'm in the last, no need to perform other checkings
                 else {
                     tempEnd = i+1;
-                    sendAvailability(tempStart, tempEnd);
+                    sendAvailability(tempStart, tempEnd, false);
                 }
 
             }
@@ -152,21 +154,31 @@ public class SetAvailabilityActivity extends BaseActivity {
 
 
 
-    private void sendAvailability(int start, int end) {
+    private void sendAvailability(int start, int end, boolean all) {
+
         //date selected
         Calendar date = Calendar.getInstance();
         date.set(yearChosen, monthChosen, dayChosen);
-
-        //times selected
         Calendar startTime = Calendar.getInstance();
-        date.set(yearChosen, monthChosen, dayChosen);
-        startTime.set(Calendar.HOUR, start);
-        startTime.set(Calendar.MINUTE, 00);
-
         Calendar endTime = Calendar.getInstance();
-        date.set(yearChosen, monthChosen, dayChosen);
-        endTime.set(Calendar.HOUR, end);
-        endTime.set(Calendar.MINUTE, 00);
+
+        if(all) {
+            startTime.set(Calendar.HOUR_OF_DAY, 0);
+            startTime.set(Calendar.MINUTE, 0);
+            endTime.set(Calendar.HOUR_OF_DAY, 23);
+            endTime.set(Calendar.MINUTE, 59);
+        }
+        else {            //times selected
+
+            startTime.set(Calendar.HOUR_OF_DAY, start);
+            startTime.set(Calendar.MINUTE, 0);
+
+
+            endTime.set(Calendar.HOUR_OF_DAY, end);
+            endTime.set(Calendar.MINUTE, 0);
+        }
+
+        calendar.setText(startTime.get(Calendar.HOUR_OF_DAY) + " " + endTime.get(Calendar.HOUR_OF_DAY) + " " +date.get(Calendar.YEAR));
 
 
         //TODO BACKEND call, send a single availability
