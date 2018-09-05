@@ -161,7 +161,8 @@
             android:theme="@style/BabyCare.PopMe" />
         <activity android:name=".layout_view.ReviewListActivity" />
         <activity android:name=".layout_view.MoneyAccountActivity" />
-        <activity android:name=".layout_view.PaymentListActivity"></activity>
+        <activity android:name=".layout_view.PaymentListActivity" />
+        <activity android:name=".layout_view.PaymentActivity"></activity>
     </application>
 
 </manifest>

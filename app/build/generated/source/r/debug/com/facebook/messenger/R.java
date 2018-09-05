@@ -89,37 +89,37 @@ public final class R {
         public static final int line1 = 0x7f0900af;
         public static final int line3 = 0x7f0900b0;
         public static final int messenger_send_button = 0x7f0900be;
-        public static final int normal = 0x7f0900db;
-        public static final int notification_background = 0x7f0900dc;
-        public static final int notification_main_column = 0x7f0900dd;
-        public static final int notification_main_column_container = 0x7f0900de;
-        public static final int right_icon = 0x7f09013b;
-        public static final int right_side = 0x7f09013c;
-        public static final int tag_transition_group = 0x7f090178;
-        public static final int text = 0x7f09017a;
-        public static final int text2 = 0x7f09017b;
-        public static final int time = 0x7f0901a6;
-        public static final int title = 0x7f0901ad;
+        public static final int normal = 0x7f0900dc;
+        public static final int notification_background = 0x7f0900dd;
+        public static final int notification_main_column = 0x7f0900de;
+        public static final int notification_main_column_container = 0x7f0900df;
+        public static final int right_icon = 0x7f090140;
+        public static final int right_side = 0x7f090141;
+        public static final int tag_transition_group = 0x7f09017d;
+        public static final int text = 0x7f09017f;
+        public static final int text2 = 0x7f090180;
+        public static final int time = 0x7f0901ab;
+        public static final int title = 0x7f0901b2;
     }
     public static final class integer {
         public static final int status_bar_notification_info_maxnum = 0x7f0a000d;
     }
     public static final class layout {
-        public static final int messenger_button_send_blue_large = 0x7f0c005c;
-        public static final int messenger_button_send_blue_round = 0x7f0c005d;
-        public static final int messenger_button_send_blue_small = 0x7f0c005e;
-        public static final int messenger_button_send_white_large = 0x7f0c005f;
-        public static final int messenger_button_send_white_round = 0x7f0c0060;
-        public static final int messenger_button_send_white_small = 0x7f0c0061;
-        public static final int notification_action = 0x7f0c0063;
-        public static final int notification_action_tombstone = 0x7f0c0064;
-        public static final int notification_template_custom_big = 0x7f0c006b;
-        public static final int notification_template_icon_group = 0x7f0c006c;
-        public static final int notification_template_part_chronometer = 0x7f0c0070;
-        public static final int notification_template_part_time = 0x7f0c0071;
+        public static final int messenger_button_send_blue_large = 0x7f0c005d;
+        public static final int messenger_button_send_blue_round = 0x7f0c005e;
+        public static final int messenger_button_send_blue_small = 0x7f0c005f;
+        public static final int messenger_button_send_white_large = 0x7f0c0060;
+        public static final int messenger_button_send_white_round = 0x7f0c0061;
+        public static final int messenger_button_send_white_small = 0x7f0c0062;
+        public static final int notification_action = 0x7f0c0064;
+        public static final int notification_action_tombstone = 0x7f0c0065;
+        public static final int notification_template_custom_big = 0x7f0c006c;
+        public static final int notification_template_icon_group = 0x7f0c006d;
+        public static final int notification_template_part_chronometer = 0x7f0c0071;
+        public static final int notification_template_part_time = 0x7f0c0072;
     }
     public static final class string {
-        public static final int messenger_send_button_text = 0x7f0f006a;
+        public static final int messenger_send_button_text = 0x7f0f0069;
         public static final int status_bar_notification_info_overflow = 0x7f0f0077;
     }
     public static final class style {
