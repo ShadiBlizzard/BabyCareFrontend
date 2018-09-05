@@ -166,11 +166,11 @@ public class SearchingActivity extends BaseActivity {
                 date.set(yearChosen, monthChosen, dayChosen);
 
                 Calendar startTime = Calendar.getInstance();
-                startTime.set(Calendar.HOUR, startingHourChosen);
+                startTime.set(Calendar.HOUR_OF_DAY, startingHourChosen);
                 startTime.set(Calendar.MINUTE, startingMinuteChosen);
 
                 Calendar endTime = Calendar.getInstance();
-                endTime.set(Calendar.HOUR, endingHourChosen);
+                endTime.set(Calendar.HOUR_OF_DAY, endingHourChosen);
                 endTime.set(Calendar.MINUTE, endingMinuteChosen);
 
                 //map things
