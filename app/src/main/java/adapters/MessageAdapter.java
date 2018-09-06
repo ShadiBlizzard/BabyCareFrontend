@@ -49,8 +49,8 @@ public class MessageAdapter extends BaseAdapter{
         TextView timestamp = (TextView) itemView.findViewById(R.id.time_msg);
         TextView sender = (TextView) itemView.findViewById(R.id.sender);
         Message sel_msg = msg.get(position);
-        timestamp.setText(sel_msg.getTimestamp());
-        sender.setText(sel_msg.getSender());
+        timestamp.setText(sel_msg.getTimestamp().toString());
+        sender.setText(sel_msg.getRes().getPa().getName());
         return itemView;
 
     }

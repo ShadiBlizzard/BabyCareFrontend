@@ -29,6 +29,7 @@
         android:label="BabyCare"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/BabyCare" >
         <activity
             android:name="com.example.shadi.babycare.layout_view.MainActivity"
@@ -171,11 +172,21 @@
             android:name="com.example.shadi.babycare.layout_view.PopupBsInfoActivity"
             android:screenOrientation="portrait"
             android:theme="@style/BabyCare.PopMe" />
-        <activity android:name="com.example.shadi.babycare.layout_view.ReviewListActivity" />
-        <activity android:name="com.example.shadi.babycare.layout_view.MoneyAccountActivity" />
-        <activity android:name="com.example.shadi.babycare.layout_view.PaymentListActivity" />
-        <activity android:name="com.example.shadi.babycare.layout_view.PaymentActivity" />
-        <activity android:name="com.example.shadi.babycare.layout_view.CreditCardActivity" />
+        <activity
+            android:name="com.example.shadi.babycare.layout_view.ReviewListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.shadi.babycare.layout_view.MoneyAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.shadi.babycare.layout_view.PaymentListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.shadi.babycare.layout_view.PaymentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.shadi.babycare.layout_view.CreditCardActivity"
+            android:screenOrientation="portrait" />
 
         <service
             android:name="com.squareup.leakcanary.internal.HeapAnalyzerService"

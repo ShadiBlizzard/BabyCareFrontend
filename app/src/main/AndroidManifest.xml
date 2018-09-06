@@ -159,11 +159,16 @@
             android:name=".layout_view.PopupBsInfoActivity"
             android:screenOrientation="portrait"
             android:theme="@style/BabyCare.PopMe" />
-        <activity android:name=".layout_view.ReviewListActivity" />
-        <activity android:name=".layout_view.MoneyAccountActivity" />
-        <activity android:name=".layout_view.PaymentListActivity" />
-        <activity android:name=".layout_view.PaymentActivity" />
-        <activity android:name=".layout_view.CreditCardActivity"></activity>
+        <activity android:name=".layout_view.ReviewListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".layout_view.MoneyAccountActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".layout_view.PaymentListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".layout_view.PaymentActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".layout_view.CreditCardActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
