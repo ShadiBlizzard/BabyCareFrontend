@@ -71,7 +71,7 @@
                     android:text="DATE:"
                     android:textColor="@color/text_color_babycare"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView19" />
+                    app:layout_constraintTop_toBottomOf="@id/textView19" />
 
                 <TextView
                     android:id="@+id/textview21"
@@ -82,7 +82,7 @@
                     android:text="FROM:"
                     android:textColor="@color/text_color_babycare"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textview20" />
+                    app:layout_constraintTop_toBottomOf="@id/textview20" />
 
                 <TextView
                     android:id="@+id/textview22"
@@ -93,9 +93,9 @@
                     android:text="TO:"
                     android:textColor="@color/text_color_babycare"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textview21" />
+                    app:layout_constraintTop_toBottomOf="@id/textview21" />
 
-                <TextView
+                <!--<TextView
                     android:id="@+id/textview23"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
@@ -104,7 +104,7 @@
                     android:text="LOCAIION:"
                     android:textColor="@color/text_color_babycare"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textview22" />
+                    app:layout_constraintTop_toBottomOf="@+id/textview22" />-->
 
                 <TextView
                     android:id="@+id/textview24"
@@ -115,7 +115,7 @@
                     android:text="BY:"
                     android:textColor="@color/text_color_babycare"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textview23" />
+                    app:layout_constraintTop_toBottomOf="@id/textview22" />
 
                 <TextView
                     android:id="@+id/textview25"
@@ -181,7 +181,7 @@
                 app:layout_constraintStart_toEndOf="@+id/cl1"
                 app:layout_constraintTop_toBottomOf="@id/res_msg_from" />
 
-            <TextView
+          <!--  <TextView
                 android:id="@+id/res_msg_loc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -192,7 +192,7 @@
                 android:textColor="@color/mainColor"
 
                 app:layout_constraintStart_toEndOf="@+id/cl1"
-                app:layout_constraintTop_toBottomOf="@id/res_msg_to" />
+                app:layout_constraintTop_toBottomOf="@id/res_msg_to" />-->
 
             <TextView
                 android:id="@+id/res_msg_by"
@@ -206,7 +206,7 @@
                 android:textColor="@color/mainColor"
 
                 app:layout_constraintStart_toEndOf="@+id/cl1"
-                app:layout_constraintTop_toBottomOf="@id/res_msg_loc" />
+                app:layout_constraintTop_toBottomOf="@id/res_msg_to" />
 
             <TextView
                 android:id="@+id/res_msg_for"

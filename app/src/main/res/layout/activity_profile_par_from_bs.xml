@@ -55,7 +55,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/name_pro" />
 
-        <TextView
+       <!-- <TextView
             android:id="@+id/description_pro"
             android:layout_width="match_parent"
             android:layout_height="200dp"
@@ -72,13 +72,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/circleImageView" />
+            app:layout_constraintTop_toBottomOf="@+id/circleImageView" />-->
 
         <android.support.constraint.ConstraintLayout
             android:id="@+id/boxinfo"
             android:layout_width="wrap_content"
+            android:layout_marginTop="20dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/description_pro"
+            app:layout_constraintTop_toBottomOf="@id/circleImageView"
             android:padding="5dp"
             android:layout_margin="8dp"
             >
@@ -120,19 +121,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 />
 
-            <TextView
-                android:id="@+id/birthdaytv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="birthday:"
-                android:textAppearance="@style/TextBabyCare"
-                android:textColor="@color/button_babycare_normal"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:paddingEnd="5dp"
-                app:layout_constraintTop_toBottomOf="@id/neighborhoodtv"
-                app:layout_constraintStart_toStartOf="parent"
-                />
         </android.support.constraint.ConstraintLayout>
 
         <TextView
@@ -141,7 +129,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="13dp"
+            android:layout_marginTop="20dp"
             android:ems="10"
             android:fontFamily="casual"
             android:hint="city"
@@ -153,7 +141,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/boxinfo"
-            app:layout_constraintTop_toBottomOf="@+id/description_pro" />
+            app:layout_constraintTop_toBottomOf="@+id/circleImageView" />
 
         <TextView
             android:id="@+id/district_pro"
@@ -194,25 +182,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             />
 
-        <TextView
-            android:id="@+id/birthday_pro"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="0dp"
-            android:ems="10"
-            android:fontFamily="casual"
-            android:hint="city"
-            android:inputType="textPersonName"
-            android:text="districtname"
-            android:textSize="22dp"
-            android:textStyle="bold"
-            android:textColor="@color/text_color_babycare"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/neighborhood_pro"
-            app:layout_constraintStart_toEndOf="@id/boxinfo"
-            />
 <android.support.constraint.ConstraintLayout
     android:id="@+id/profile_variable_content"
     android:layout_width="match_parent"
