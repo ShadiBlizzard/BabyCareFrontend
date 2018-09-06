@@ -18,6 +18,7 @@ public class Reservation implements Serializable{
     public Reservation(Calendar start, Calendar end, Calendar when, Uzer parent, Availability av, AppointmentStatus status) {
         this.start = start;
         this.end = end;
+        this.when = when;
         this.pa = parent;
         this.av = av;
         this.status = status;

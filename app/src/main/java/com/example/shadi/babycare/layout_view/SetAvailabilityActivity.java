@@ -178,7 +178,7 @@ public class SetAvailabilityActivity extends BaseActivity {
             endTime.set(Calendar.MINUTE, 0);
         }
 
-        calendar.setText(startTime.get(Calendar.HOUR_OF_DAY) + " " + endTime.get(Calendar.HOUR_OF_DAY) + " " +date.get(Calendar.YEAR));
+        //calendar.setText(startTime.get(Calendar.HOUR_OF_DAY) + " " + endTime.get(Calendar.HOUR_OF_DAY) + " " +date.get(Calendar.YEAR));
 
 
         //TODO BACKEND call, send a single availability

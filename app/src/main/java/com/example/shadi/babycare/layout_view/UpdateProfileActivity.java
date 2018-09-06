@@ -42,6 +42,7 @@ public class UpdateProfileActivity extends BaseActivity {
         district = findViewById(R.id.upd_district);
         neighbourhood = findViewById(R.id.upd_neighbourhood);
         update = findViewById(R.id.update);
+        pic = findViewById(R.id.update_pic);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.planets_array,
                 R.layout.spinner_item);
