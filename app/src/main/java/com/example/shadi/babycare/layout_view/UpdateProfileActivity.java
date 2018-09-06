@@ -38,7 +38,7 @@ public class UpdateProfileActivity extends BaseActivity {
         getLayoutInflater().inflate(R.layout.activity_update_profile, fl);
 
         city = findViewById(R.id.upd_city);
-        description = findViewById(R.id.update_descr);
+        //description = findViewById(R.id.update_descr);
         district = findViewById(R.id.upd_district);
         neighbourhood = findViewById(R.id.upd_neighbourhood);
         update = findViewById(R.id.update);
