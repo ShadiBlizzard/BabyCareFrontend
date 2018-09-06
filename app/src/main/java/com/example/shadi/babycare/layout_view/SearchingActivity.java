@@ -40,7 +40,6 @@ public class SearchingActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //TODO PINS PER INDIRIZZO
         super.onCreate(savedInstanceState);
         //this is needed in order to have the drawer in all activities
         FrameLayout fl = findViewById(R.id.content_frame);
@@ -171,8 +170,10 @@ public class SearchingActivity extends BaseActivity {
 
                     //INIZIO HARDCODING
                     List<Uzer> bs = new ArrayList<>();
-                    bs.add(new Uzer("sbiribilla", "volante", "pic", "Milano, piazza leonardo", 5));
-                    bs.add(new Uzer("sbiribilla", "volante2", "pic", "Milano, via bonardi", 5));
+                    bs.add(new Uzer());
+                    bs.get(0).getData().setAddress("milano, piazza leonardo");
+                    bs.add(new Uzer());
+                    bs.get(1).getData().setAddress("milano, via bonardi");
 
                     //FINE HARDCODING
 

@@ -59,7 +59,7 @@
         app:layout_constraintTop_toBottomOf="@+id/review_detail_bs_name" />
 
     <TextView
-        android:id="@+id/review_detail_title"
+        android:id="@+id/review_detail_timestamp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -89,7 +89,7 @@
         app:layout_constraintBottom_toTopOf="@+id/review_detail_rating"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/review_detail_title" />
+        app:layout_constraintTop_toBottomOf="@+id/review_detail_timestamp" />
 
     <RatingBar
         android:id="@+id/review_detail_rating"

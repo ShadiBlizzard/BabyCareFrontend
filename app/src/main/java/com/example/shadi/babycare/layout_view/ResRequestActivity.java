@@ -20,7 +20,7 @@ import java.util.List;
 import model.Message;
 
 public class ResRequestActivity extends BaseActivity {
-    private TextView timestamp, sender, text, from, to, date, location;
+    private TextView timestamp, seen, text, from, to, date, location;
     private Message m;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,12 +36,13 @@ public class ResRequestActivity extends BaseActivity {
         m = (Message) getIntent().getSerializableExtra("message");
 
         timestamp = findViewById(R.id.res_msg_id);
-        sender = findViewById(R.id.res_msg_by);
         text = findViewById(R.id.res_msg_content);
+      /*  sender = findViewById(R.id.res_msg_by);
+
         date = findViewById(R.id.res_msg_date);
         from = findViewById(R.id.res_msg_from);
         to = findViewById(R.id.res_msg_to);
-        location = findViewById(R.id.res_msg_loc);
+        location = findViewById(R.id.res_msg_loc);*/
 
     }
 
@@ -50,8 +51,9 @@ public class ResRequestActivity extends BaseActivity {
         super.onPostCreate(savedInstanceState);
 
         timestamp.setText(m.getTimestamp().toString());
-        sender.setText(m.getRes().getPa().getName());
         text.setText(m.getTxt());
+      /*  sender.setText(m.getRes().getPa().getData().getName());
+
         date.setText(m.getRes().getWhen().toString());
         from.setText(m.getRes().getStart().toString());
         to.setText(m.getRes().getEnd().toString());
@@ -65,7 +67,7 @@ public class ResRequestActivity extends BaseActivity {
         }
 
         location.setText(a.get(0).getLocality() + ", " + a.get(0).getThoroughfare());
-
+*/
 
 
 

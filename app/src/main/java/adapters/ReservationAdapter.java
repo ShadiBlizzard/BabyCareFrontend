@@ -50,7 +50,9 @@ public class ReservationAdapter extends BaseAdapter {
         TextView counterpart = (TextView) itemView.findViewById(R.id.counterpart_name);
         TextView status = (TextView) itemView.findViewById(R.id.status_res);
         Reservation sel_res = res.get(position);
-        //timestamp.setText(sel_res.getTimestamp());
+        timestamp.setText(sel_res.getId());
+
+        //TODO babysitter name in caso di parent e viceversa
         //counterpart.setText(sel_res.getCounterpart());
         status.setText(sel_res.getStatus().toString());
         return itemView;

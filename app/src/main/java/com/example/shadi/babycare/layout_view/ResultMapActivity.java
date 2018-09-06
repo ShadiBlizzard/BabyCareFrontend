@@ -21,6 +21,9 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+import model.AppointmentStatus;
+import model.Availability;
+import model.Reservation;
 import model.Uzer;
 
 public class ResultMapActivity extends BaseActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener{
@@ -75,12 +78,12 @@ public class ResultMapActivity extends BaseActivity implements OnMapReadyCallbac
             List<Address> temp;
             Uzer currentBs = bs.get(i);
             try {
-                temp = geocoder.getFromLocationName(currentBs.getAddress(), 1);
+                temp = geocoder.getFromLocationName(currentBs.getData().getAddress(), 1);
                 if(temp == null) {
                     throw new IllegalArgumentException("address not found");
                 }
                 convertedTags.add(currentBs);
-                convertedTags.get(i).setAddress(temp.get(0).getLatitude() + "+" +temp.get(0).getLongitude());
+                convertedTags.get(i).getData().setAddress(temp.get(0).getLatitude() + "+" +temp.get(0).getLongitude());
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -100,7 +103,7 @@ public class ResultMapActivity extends BaseActivity implements OnMapReadyCallbac
         //phase 2: add a marker for every babysitter on the map
         for(int i = 0; i<convertedTags.size(); i++) {
             //I retrieve latitude and longitude from the addresses
-            String coord = convertedTags.get(i).getAddress();
+            String coord = convertedTags.get(i).getData().getAddress();
             int index = coord.indexOf('+');
             Double latitude = Double.parseDouble(coord.substring(0, index-1));
             Double longitude = Double.parseDouble(coord.substring(index+1, coord.length()-1));
@@ -132,7 +135,7 @@ public class ResultMapActivity extends BaseActivity implements OnMapReadyCallbac
         Uzer bs = null;
         //looking for the correct bs
         for (int i = 0; i< convertedTags.size(); i++) {
-            String coord = convertedTags.get(i).getAddress();
+            String coord = convertedTags.get(i).getData().getAddress();
             int index = coord.indexOf('+');
             Double latitude = Double.parseDouble(coord.substring(0, index-1));
             Double longitude = Double.parseDouble(coord.substring(index+1, coord.length()-1));
@@ -147,9 +150,12 @@ public class ResultMapActivity extends BaseActivity implements OnMapReadyCallbac
         Intent it = new Intent(getApplicationContext(), PopupBsInfoActivity.class);
         it.putExtra("profile", bs);
 
-       // Reservation r = new Reservation(new LatLng(Double.parseDouble(lat), Double.parseDouble(lng)), start, end, date, new ProfilePar(), bs, AppointmentStatus.REQUESTED);
+        //HARDCODED
+        Availability a = new Availability();
+        a.setBabysitter(bs);
+        Reservation r = new Reservation(start, end, date, new Uzer(), a, AppointmentStatus.REQUESTED);
 
-       // it.putExtra("reservationData", r);
+        it.putExtra("reservationData", r);
         startActivity(it);
 
         return true;

@@ -22,7 +22,7 @@ public class ProfileListActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //TODO backend call, creazione di una lista in base alla richiesta dell'utente
+        //TODO NON LA USIAMO, NON CI SERVE ADATTARE LA LISTA
         super.onCreate(savedInstanceState);
         FrameLayout fl = findViewById(R.id.content_frame);
         getLayoutInflater().inflate(R.layout.activity_profile_list, fl);
@@ -37,15 +37,12 @@ public class ProfileListActivity extends BaseActivity {
     private void listCreation() {
         ArrayList<Uzer> bs= new ArrayList<>();
 
-        bs.add(new Uzer("Sbiribilla", "Volante", "pic", "via tot", 0.6f));
-        bs.add(new Uzer("Sbiribilla", "Volante", "pic", "via tot", 0.6f));
-        bs.add(new Uzer("Sbiribilla", "Volante", "pic", "via tot", 0.6f));
-        bs.add(new Uzer("Sbiribilla", "Volante", "pic", "via tot", 0.6f));
-        bs.add(new Uzer("Sbiribilla", "Volante", "pic", "via tot", 0.6f));
-        bs.add(new Uzer("Sbiribilla", "Volante", "pic", "via tot", 0.6f));
-        bs.add(new Uzer("Sbiribilla", "Volante", "pic", "via tot", 0.6f));
-        bs.add(new Uzer("Sbiribilla", "Volante", "pic", "via tot", 0.6f));
-        bs.add(new Uzer("Sbiribilla", "Volante", "pic", "via tot", 0.6f));
+        bs.add(new Uzer());
+        bs.add(new Uzer());
+        bs.add(new Uzer());
+        bs.add(new Uzer());
+        bs.add(new Uzer());
+        bs.add(new Uzer());
 
         if (bs.isEmpty()) {
             txt.setText("No results found");

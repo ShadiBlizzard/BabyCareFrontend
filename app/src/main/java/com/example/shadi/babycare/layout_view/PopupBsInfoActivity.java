@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.example.shadi.babycare.R;
 
+import model.Reservation;
 import model.Uzer;
 
 public class PopupBsInfoActivity extends Activity {
@@ -21,6 +22,7 @@ public class PopupBsInfoActivity extends Activity {
     private RatingBar rating;
     private Button profile, close;
     private Uzer bs;
+    private Reservation pendingRes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,7 @@ public class PopupBsInfoActivity extends Activity {
         setContentView(R.layout.activity_popup_bs_info);
         Intent i = getIntent();
         bs = (Uzer) i.getSerializableExtra("profile");
+        pendingRes = (Reservation) i.getSerializableExtra("reservationData");
 
 
         name = findViewById(R.id.popup_bsname);
@@ -37,8 +40,8 @@ public class PopupBsInfoActivity extends Activity {
         profile = findViewById(R.id.popup_profile);
         close = findViewById(R.id.popup_close);
 
-        name.setText(bs.getName());
-        surname.setText(bs.getSurname());
+        name.setText(bs.getData().getName());
+        surname.setText(bs.getData().getSurname());
         hourlyCost.setText(bs.getHourlyPrice() + " €/h");
         rating.setRating(bs.getRating());
 

@@ -46,13 +46,13 @@ public class ReviewAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View itemView = convertView;
         itemView = (itemView == null) ? inflater.inflate(R.layout.review_item, null): itemView;
-        TextView title = (TextView) itemView.findViewById(R.id.review_title);
+        TextView title = (TextView) itemView.findViewById(R.id.review_timestamp);
         RatingBar rating = (RatingBar) itemView.findViewById(R.id.ratingBar);
         TextView reviewed = (TextView) itemView.findViewById(R.id.reviewed_name);
 
         Review sel_rvw = rvw.get(position);
-        title.setText(sel_rvw.getTitle());
-        reviewed.setText(sel_rvw.getReviewed_bs());
+        title.setText(sel_rvw.getTimestamp().getTime().toString());
+        reviewed.setText(sel_rvw.getBs().getData().getName());
         rating.setRating(sel_rvw.getRating());
 
         return itemView;

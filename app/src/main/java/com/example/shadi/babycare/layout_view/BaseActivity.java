@@ -18,6 +18,7 @@ import java.util.Calendar;
 import java.util.Locale;
 
 import model.AppointmentStatus;
+import model.Availability;
 import model.Message;
 import model.MoneyAccount;
 import model.Payment;
@@ -63,9 +64,9 @@ public class BaseActivity extends AppCompatActivity {
 
                         //TODO BACKEND RETRIEVE RESERVATIONS
                         ArrayList<Reservation> res = new ArrayList<>();
-                        res.add(new Reservation(45.4642035, 9.186515999999983, Calendar.getInstance(),
+                        res.add(new Reservation( Calendar.getInstance(),
                                 Calendar.getInstance(), Calendar.getInstance(),
-                                new Uzer("mozzarella", "volante", "pic", "Milano, piazza leonardo", 5), new Uzer("name", "surname", "pic", "milano piazza duomo", 3), AppointmentStatus.REQUESTED));
+                                new Uzer(), new Availability(), AppointmentStatus.REQUESTED));
                         resCaller.putExtra("reservations", res);
                         startActivity(resCaller);
                         break;
@@ -75,6 +76,7 @@ public class BaseActivity extends AppCompatActivity {
                         ArrayList<Message> obj = new ArrayList<>();
                         obj.add(new Message());
                         obj.add(new Message());
+                        obj.get(1).setSeen(true);
                         obj.add(new Message());
 
                         msgCaller.putExtra("messages", obj);

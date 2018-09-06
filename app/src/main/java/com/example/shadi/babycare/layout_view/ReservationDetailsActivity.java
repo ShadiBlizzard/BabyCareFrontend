@@ -36,7 +36,7 @@ public class ReservationDetailsActivity extends BaseActivity {
         name1 = findViewById(R.id.part_parent_name);
         name2 = findViewById(R.id.part_bs_name);
         timestamp = findViewById(R.id.part_timestamp);
-        address = findViewById(R.id.part_address);
+//        address = findViewById(R.id.part_address);
         cl = findViewById(R.id.part_cons);
 
         super.setTitle("Reservation details");
@@ -49,31 +49,20 @@ public class ReservationDetailsActivity extends BaseActivity {
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         status.setText(res.getStatus().toString());
-        name1.setText(res.getPa().getName());
-        name2.setText(res.getBs().getName());
+        name1.setText(res.getPa().getData().getName());
+        name2.setText(res.getAv().getBabysitter().getData().getName());
         timestamp.setText(res.getWhen().toString());
-
-        Geocoder g = new Geocoder(this);
-        List<Address> a = new ArrayList<>();
-        try {
-            a = g.getFromLocation(res.getLat(), res.getLongi(), 1);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        address.setText(a.get(0).getLocality() + ", " + a.get(0).getThoroughfare());
 
         String stat = status.getText().toString();
         //setting the opt button dynamically
         Button opt = new Button(getApplicationContext());
         opt.setBackgroundResource(R.drawable.button);
         opt.setId(R.id.opt);
-        ConstraintSet cs = new ConstraintSet();
+        /*ConstraintSet cs = new ConstraintSet();
         cs.clone(cl);
-        cs.connect(opt.getId(), ConstraintSet.TOP, R.id.part_address, ConstraintSet.TOP);
         cs.connect(opt.getId(), ConstraintSet.START, cl.getId(), ConstraintSet.START);
         cs.connect(opt.getId(), ConstraintSet.END, cl.getId(), ConstraintSet.END);
-        cs.applyTo(cl);
+        cs.applyTo(cl);*/
 
         if(stat.equals("ACCEPTED"))
             opt.setText("CANCEL");

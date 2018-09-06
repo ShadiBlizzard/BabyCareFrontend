@@ -47,10 +47,16 @@ public class MessageAdapter extends BaseAdapter{
         View itemView = convertView;
         itemView = (itemView == null) ? inflater.inflate(R.layout.message_item, null): itemView;
         TextView timestamp = (TextView) itemView.findViewById(R.id.time_msg);
-        TextView sender = (TextView) itemView.findViewById(R.id.sender);
+        //TextView sender = (TextView) itemView.findViewById(R.id.sender);
+        TextView seen = itemView.findViewById(R.id.seen);
         Message sel_msg = msg.get(position);
         timestamp.setText(sel_msg.getTimestamp().toString());
-        sender.setText(sel_msg.getRes().getPa().getName());
+
+        if (msg.get(position).isSeen())
+            seen.setText("seen");
+        else
+            seen.setText("not seen");
+       // sender.setText(sel_msg.getRes().getPa().getData().getName());
         return itemView;
 
     }

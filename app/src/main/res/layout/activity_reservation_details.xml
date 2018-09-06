@@ -168,7 +168,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/part_timestamp" />
 
-    <TextView
+    <!--<TextView
         android:id="@+id/part_address"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -181,7 +181,7 @@
         android:textColor="@color/button_babycare_normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/postext" />
+        app:layout_constraintTop_toBottomOf="@+id/postext" />-->
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/variable_button_res"
@@ -189,7 +189,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/part_address"></android.support.constraint.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@id/part_timestamp"></android.support.constraint.ConstraintLayout>
 
 
 </android.support.constraint.ConstraintLayout>

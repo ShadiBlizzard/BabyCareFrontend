@@ -26,7 +26,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <android.support.constraint.ConstraintLayout
+        <!--<android.support.constraint.ConstraintLayout
             android:id="@+id/boxmsg"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -219,7 +219,7 @@
                 app:layout_constraintStart_toEndOf="@+id/cl1"
                 app:layout_constraintTop_toBottomOf="@id/res_msg_by" />
 
-        </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>-->
 
         <TextView
             android:id="@+id/res_msg_content"
@@ -236,7 +236,7 @@
             android:textSize="22dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/boxmsg" />
+            app:layout_constraintTop_toBottomOf="@+id/timestamp" />
 
         <android.support.constraint.ConstraintLayout
             android:id="@+id/bs_answer_buttons"
