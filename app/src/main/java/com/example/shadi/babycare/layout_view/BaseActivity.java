@@ -90,7 +90,7 @@ public class BaseActivity extends AppCompatActivity {
                         u.setRole(Role.PARENT);
                         Intent profileCaller = null;
                         if (u.getRole().toString().equals("PARENT"))
-                             profileCaller = new Intent(getApplicationContext(), ProfileParFromBsActivity.class);
+                             profileCaller = new Intent(getApplicationContext(), ProfileParFromParActivity.class);
                         else
                             profileCaller = new Intent(getApplicationContext(), ProfileBsFromBsActivity.class);
 
