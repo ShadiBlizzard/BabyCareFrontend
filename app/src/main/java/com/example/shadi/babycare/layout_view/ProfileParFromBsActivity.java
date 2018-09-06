@@ -1,10 +1,13 @@
 package com.example.shadi.babycare.layout_view;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.example.shadi.babycare.R;
+
+import model.Uzer;
 
 public class ProfileParFromBsActivity extends BaseActivity {
 
@@ -26,6 +29,7 @@ public class ProfileParFromBsActivity extends BaseActivity {
 
         super.setTitle("Profile");
     }
+
 
     public TextView getName() {
         return name;

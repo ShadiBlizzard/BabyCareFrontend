@@ -23,6 +23,7 @@ import model.Message;
 import model.MoneyAccount;
 import model.Payment;
 import model.Reservation;
+import model.Role;
 import model.Uzer;
 
 public class BaseActivity extends AppCompatActivity {
@@ -84,7 +85,16 @@ public class BaseActivity extends AppCompatActivity {
                         break;
                     case R.id.nav_profile:
                         //TODO PROFILE BASED ON USER ROLE
-                        Intent profileCaller = new Intent(getApplicationContext(), ProfileParFromBsActivity.class);
+                        //HARDCODE
+                        Uzer u = new Uzer();
+                        u.setRole(Role.PARENT);
+                        Intent profileCaller = null;
+                        if (u.getRole().toString().equals("PARENT"))
+                             profileCaller = new Intent(getApplicationContext(), ProfileParFromBsActivity.class);
+                        else
+                            profileCaller = new Intent(getApplicationContext(), ProfileBsFromBsActivity.class);
+
+                        profileCaller.putExtra("profile", u);
                         startActivity(profileCaller);
                         break;
                     case R.id.nav_money:

@@ -2,6 +2,7 @@ package com.example.shadi.babycare.layout_view;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.view.View;
 import android.widget.Button;
@@ -9,9 +10,12 @@ import android.widget.FrameLayout;
 
 import com.example.shadi.babycare.R;
 
+import model.Uzer;
+
 public class ProfileBsFromBsActivity extends ProfileParFromBsActivity {
 
     private Button update, reviews, availabilities, payment;
+    private Uzer u;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,10 +29,26 @@ public class ProfileBsFromBsActivity extends ProfileParFromBsActivity {
         availabilities = findViewById(R.id.set_availabilities);
         payment = findViewById(R.id.set_payment);
 
+        u = (Uzer) getIntent().getSerializableExtra("profile");
+
+
+    }
+
+    @Override
+    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+
+        super.setName(u.getData().getName());
+        super.setSurname(u.getData().getSurname());
+        super.setDistrict(u.getData().getDistrict());
+        super.setNeighborhood(u.getData().getNeighborhood());
+        super.setCity(u.getData().getCity());
+
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent it = new Intent(getApplicationContext(), UpdateProfileActivity.class);
+                it.putExtra("profile", u);
                 startActivity(it);
             }
         });
@@ -36,6 +56,8 @@ public class ProfileBsFromBsActivity extends ProfileParFromBsActivity {
         reviews.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                //TODO REVIEWS
                 Intent it = new Intent(getApplicationContext(), ReviewListActivity.class);
                 startActivity(it);
             }
@@ -56,6 +78,5 @@ public class ProfileBsFromBsActivity extends ProfileParFromBsActivity {
                 startActivity(i);
             }
         });
-
     }
 }
