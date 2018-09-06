@@ -48,7 +48,6 @@ public class PaymentListActivity extends BaseActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> payment, View view, int position, long id) {
-                //TODO hardcode
                 Payment p = payments.get(position);
                 Intent i = new Intent(getApplicationContext(), PaymentActivity.class);
                 i.putExtra("payment", p);

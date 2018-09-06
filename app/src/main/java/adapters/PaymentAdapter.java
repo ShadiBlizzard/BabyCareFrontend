@@ -23,22 +23,22 @@ public class PaymentAdapter extends BaseAdapter {
     public PaymentAdapter (Activity context, ArrayList<Payment> list) {
         this.context = context;
         this.payments = list;
-        this.inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+        inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
     public int getCount() {
-        return 0;
+        return payments.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return null;
+        return payments.get(i);
     }
 
     @Override
     public long getItemId(int i) {
-        return 0;
+        return i;
     }
 
     @Override
