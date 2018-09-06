@@ -9,7 +9,7 @@ public class Message implements Serializable{
 
     private Calendar timestamp = Calendar.getInstance();
     private String txt ="ambarabaciccicocco";
-    private Reservation res = new Reservation(new LatLng(4.0, 4.0), Calendar.getInstance(), Calendar.getInstance(), Calendar.getInstance(), new Uzer("mozzarella", "volante", "pic", "Milano, piazza leonardo", 5), new Uzer("sbiribilla", "volante", "pic", "Milano, piazza leonardo", 5), AppointmentStatus.REQUESTED);
+    private Reservation res = new Reservation(45.4642035, 9.186515999999983, Calendar.getInstance(), Calendar.getInstance(), Calendar.getInstance(), new Uzer("mozzarella", "volante", "pic", "Milano, piazza leonardo", 5), new Uzer("sbiribilla", "volante", "pic", "Milano, piazza leonardo", 5), AppointmentStatus.REQUESTED);
 
 
     public  Message () {

@@ -43,7 +43,7 @@ public class HomeActivity extends BaseActivity {
                 //TODO RETRIEVE RES
                 Intent it = new Intent(getApplicationContext(), ReservationsListActivity.class);
                 ArrayList<Reservation> res = new ArrayList<>();
-                res.add(new Reservation(new LatLng(45.4642035, 9.186515999999983), Calendar.getInstance(),
+                res.add(new Reservation(45.4642035, 9.186515999999983, Calendar.getInstance(),
                         Calendar.getInstance(), Calendar.getInstance(),
                         new Uzer("mozzarella", "volante", "pic", "Milano, piazza leonardo", 5), new Uzer("name", "surname", "pic", "milano piazza duomo", 3), AppointmentStatus.REQUESTED));
                 it.putExtra("reservations", res);

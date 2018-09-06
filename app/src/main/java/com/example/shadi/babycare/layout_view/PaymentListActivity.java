@@ -32,27 +32,15 @@ public class PaymentListActivity extends BaseActivity {
         super.setTitle("Your payments");
 
         NavigationView nv = findViewById(R.id.nav_view);
-        nv.getMenu().getItem(6).setChecked(true);
+        nv.getMenu().getItem(5).setChecked(true);
 
         listView = findViewById(R.id.payment_list);
+        payments = (ArrayList<Payment>) getIntent().getSerializableExtra("payments");
         listCreation();
 
     }
 
     private void listCreation() {
-
-        //TODO BACKEND CALL
-        payments = new ArrayList<>();
-        payments.add(new Payment());
-        payments.add(new Payment());
-        payments.add(new Payment());
-        payments.add(new Payment());
-        payments.add(new Payment());
-        payments.add(new Payment());
-        payments.add(new Payment());
-        payments.add(new Payment());
-        payments.add(new Payment());
-
         adapter = new PaymentAdapter(this, payments);
 
         listView.setAdapter(adapter);

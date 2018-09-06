@@ -19,7 +19,7 @@ public class MoneyAccountActivity extends BaseActivity {
         super.setTitle("Money Account");
 
         NavigationView nv = findViewById(R.id.nav_view);
-        nv.getMenu().getItem(5).setChecked(true);
+        nv.getMenu().getItem(4).setChecked(true);
 
         actual = findViewById(R.id.money_amount);
         pending = findViewById(R.id.money_pending);

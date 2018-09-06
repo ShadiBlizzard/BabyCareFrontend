@@ -56,12 +56,12 @@ public class ReservationDetailsActivity extends BaseActivity {
         Geocoder g = new Geocoder(this);
         List<Address> a = new ArrayList<>();
         try {
-            a = g.getFromLocation(res.getWhere().latitude, res.getWhere().longitude, 1);
+            a = g.getFromLocation(res.getLat(), res.getLongi(), 1);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        address.setText(a.get(0).getLocality());
+        address.setText(a.get(0).getLocality() + ", " + a.get(0).getThoroughfare());
 
         String stat = status.getText().toString();
         //setting the opt button dynamically

@@ -11,15 +11,17 @@ public class Reservation implements Serializable{
     private Calendar start, end, when;
     private Uzer bs;
     private Uzer pa;
-    private LatLng where;
+    private Double lat;
+    private Double longi;
     private AppointmentStatus status;
 
 
-    public Reservation(LatLng where, Calendar start, Calendar end, Calendar when, Uzer parent, Uzer babysitter, AppointmentStatus status) {
+    public Reservation(Double lat, Double lng, Calendar start, Calendar end, Calendar when, Uzer parent, Uzer babysitter, AppointmentStatus status) {
         this.start = start;
         this.end = end;
         this.when = when;
-        this.where = where;
+        this.lat = lat;
+        this.longi = lng;
         this.pa = parent;
         this.bs = babysitter;
         this.status = status;
@@ -47,9 +49,6 @@ public class Reservation implements Serializable{
         return when;
     }
 
-    public LatLng getWhere() {
-        return where;
-    }
     public Uzer getBs() {
         return bs;
     }
@@ -57,4 +56,14 @@ public class Reservation implements Serializable{
     public Uzer getPa() {
         return pa;
     }
+
+    public Double getLat() {
+        return lat;
+    }
+
+    public Double getLongi() {
+        return longi;
+    }
+
+
 }

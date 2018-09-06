@@ -20,6 +20,7 @@ import java.util.Locale;
 import model.AppointmentStatus;
 import model.Message;
 import model.MoneyAccount;
+import model.Payment;
 import model.Reservation;
 import model.Uzer;
 
@@ -62,7 +63,7 @@ public class BaseActivity extends AppCompatActivity {
 
                         //TODO BACKEND RETRIEVE RESERVATIONS
                         ArrayList<Reservation> res = new ArrayList<>();
-                        res.add(new Reservation(new LatLng(45.4642035, 9.186515999999983), Calendar.getInstance(),
+                        res.add(new Reservation(45.4642035, 9.186515999999983, Calendar.getInstance(),
                                 Calendar.getInstance(), Calendar.getInstance(),
                                 new Uzer("mozzarella", "volante", "pic", "Milano, piazza leonardo", 5), new Uzer("name", "surname", "pic", "milano piazza duomo", 3), AppointmentStatus.REQUESTED));
                         resCaller.putExtra("reservations", res);
@@ -79,10 +80,6 @@ public class BaseActivity extends AppCompatActivity {
                         msgCaller.putExtra("messages", obj);
                         startActivity(msgCaller);
                         break;
-                    case R.id.nav_policy:
-                        Intent policyCaller = new Intent(getApplicationContext(), PolicyActivity.class);
-                        startActivity(policyCaller);
-                        break;
                     case R.id.nav_profile:
                         //TODO PROFILE BASED ON USER ROLE
                         Intent profileCaller = new Intent(getApplicationContext(), ProfileParFromBsActivity.class);
@@ -91,6 +88,17 @@ public class BaseActivity extends AppCompatActivity {
                     case R.id.nav_money:
                         Intent moneyCaller = new Intent(getApplicationContext(), MoneyAccountActivity.class);
                         startActivity(moneyCaller);
+                        break;
+                    case R.id.nav_payments:
+                        //TODO PAYMENT LIST RETRIEVAL
+                        Intent payCaller = new Intent(getApplicationContext(), PaymentListActivity.class);
+                        ArrayList<Payment> pay = new ArrayList<>();
+                        pay.add(new Payment());
+                        pay.add(new Payment());
+                        pay.add(new Payment());
+
+                        payCaller.putExtra("payments", pay);
+                        startActivity(payCaller);
                         break;
                     case R.id.nav_logout:
                         //TODO LOGOUT MANAGING

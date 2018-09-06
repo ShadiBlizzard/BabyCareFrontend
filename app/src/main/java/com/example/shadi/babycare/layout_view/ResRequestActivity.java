@@ -59,12 +59,12 @@ public class ResRequestActivity extends BaseActivity {
         Geocoder g = new Geocoder(this);
         List<Address> a = new ArrayList<>();
         try {
-           a = g.getFromLocation(m.getRes().getWhere().latitude, m.getRes().getWhere().longitude, 1);
+           a = g.getFromLocation(m.getRes().getLat(), m.getRes().getLongi(), 1);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        location.setText(a.get(0).getLocality());
+        location.setText(a.get(0).getLocality() + ", " + a.get(0).getThoroughfare());
 
 
 
