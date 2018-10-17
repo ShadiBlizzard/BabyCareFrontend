@@ -1,8 +1,6 @@
 package com.example.shadi.babycare.layout_view;
 
-import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -30,7 +28,7 @@ public class CreditCardActivity extends BaseActivity {
         getLayoutInflater().inflate(R.layout.activity_credit_card, fl);
         super.setTitle("Payment settings");
 
-        name = findViewById(R.id.cc_owner);
+        name = findViewById(R.id.et_ownerName_creditCard);
         number = findViewById(R.id.cc_number);
         ccv = findViewById(R.id.cc_ccv);
         expmonth = findViewById(R.id.cc_month);

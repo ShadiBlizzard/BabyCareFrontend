@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView android:layout_width="match_parent"
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -47,7 +48,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:background="@color/button_babycare_disabled"
+        android:background="@drawable/detail_textview"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -89,7 +90,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@color/button_babycare_disabled"
+        android:background="@drawable/detail_textview"
         android:layout_marginStart="8dp"
         android:padding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -146,10 +147,10 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:text="TIMESTAMP"
+        android:textStyle="bold"
         android:textAppearance="@style/TextBabyCare"
         android:gravity="center"
-        android:background="@color/button_babycare_disabled"
-        android:textColor="@color/button_babycare_normal"
+        android:background="@drawable/detail_textview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/timetext" />
@@ -161,35 +162,64 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Where"
+        android:text="Hourly price"
         android:textAppearance="@style/TextBabyCare"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/part_timestamp" />
 
-    <!--<TextView
-        android:id="@+id/part_address"
+    <TextView
+        android:id="@+id/tv_hourlyPrice_reservationDetails"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:background="@color/button_babycare_disabled"
-        android:text="ADDRESS"
-        android:textAppearance="@style/TextBabyCare"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/detail_textview"
         android:gravity="center"
-        android:textColor="@color/button_babycare_normal"
+        android:text="PRICE"
+        android:textAppearance="@style/TextBabyCare"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/postext" />-->
+        app:layout_constraintTop_toBottomOf="@id/postext" />
 
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Additional info"
+        android:textAppearance="@style/TextBabyCare"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tv_hourlyPrice_reservationDetails"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_additionalInfo_reservationDetails"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:background="@drawable/detail_textview"
+        android:text="INFO"
+        android:textAppearance="@style/TextBabyCare"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text1" />
+
+    <!--Bottone che cambia in base allo stato della reserv-->
     <android.support.constraint.ConstraintLayout
         android:id="@+id/variable_button_res"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/part_timestamp"></android.support.constraint.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@id/tv_additionalInfo_reservationDetails"></android.support.constraint.ConstraintLayout>
 
 
 </android.support.constraint.ConstraintLayout>
