@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\giuli\\StudioProjects\\BabyCareFrontend\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\giuli\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-v7-28.0.0-alpha1.aar\\3c214bf26358bc47a5016b2187b0601c\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\giuli\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-v7-28.0.0-alpha1.aar\\0bb60988ff4fb84b23e7ff0e73f4d6e6\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\giuli\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0-alpha1.aar\\26b5cb2c9752820e87e259afabac8b62\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\giuli\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0-alpha1.aar\\c39b881aea5bc1f51f5e149a9fd469f2\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
