@@ -24,20 +24,20 @@
         "source": "C:\\Users\\giuli\\StudioProjects\\BabyCareFrontend\\app\\src\\main\\res\\layout\\activity_money_account.xml"
     },
     {
-        "merged": "C:\\Users\\giuli\\StudioProjects\\BabyCareFrontend\\app\\build\\intermediates\\res\\merged\\debug\\layout_com_facebook_activity_layout.xml.flat",
-        "source": "C:\\Users\\giuli\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.35.0.aar\\bcc5e6e014431f11750c224da164d2be\\res\\layout\\com_facebook_activity_layout.xml"
-    },
-    {
         "merged": "C:\\Users\\giuli\\StudioProjects\\BabyCareFrontend\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_item_subheader.xml.flat",
         "source": "C:\\Users\\giuli\\.gradle\\caches\\transforms-1\\files-1.1\\design-internal-28.0.0-alpha1.aar\\983c8b8d64c27e21984e0e623d8cbf0d\\res\\layout\\design_navigation_item_subheader.xml"
     },
     {
-        "merged": "C:\\Users\\giuli\\StudioProjects\\BabyCareFrontend\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
-        "source": "C:\\Users\\giuli\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0-alpha1.aar\\c39b881aea5bc1f51f5e149a9fd469f2\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_48dp.png"
+        "merged": "C:\\Users\\giuli\\StudioProjects\\BabyCareFrontend\\app\\build\\intermediates\\res\\merged\\debug\\layout_com_facebook_activity_layout.xml.flat",
+        "source": "C:\\Users\\giuli\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.35.0.aar\\bcc5e6e014431f11750c224da164d2be\\res\\layout\\com_facebook_activity_layout.xml"
     },
     {
         "merged": "C:\\Users\\giuli\\StudioProjects\\BabyCareFrontend\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_menu_item.xml.flat",
         "source": "C:\\Users\\giuli\\.gradle\\caches\\transforms-1\\files-1.1\\design-internal-28.0.0-alpha1.aar\\983c8b8d64c27e21984e0e623d8cbf0d\\res\\layout\\design_navigation_menu_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\giuli\\StudioProjects\\BabyCareFrontend\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
+        "source": "C:\\Users\\giuli\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0-alpha1.aar\\c39b881aea5bc1f51f5e149a9fd469f2\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_48dp.png"
     },
     {
         "merged": "C:\\Users\\giuli\\StudioProjects\\BabyCareFrontend\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_black_16dp.png.flat",

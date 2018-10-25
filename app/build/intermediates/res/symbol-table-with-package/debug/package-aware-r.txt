@@ -1365,6 +1365,7 @@ id error_but
 id errorregister
 id errorregister2
 id errortextview
+id et_amount_creditcard
 id et_availabilityDate_setAvail
 id et_availabilityEndTime_setAvail
 id et_availabilityStartTime_setAvail
@@ -1398,6 +1399,7 @@ id hybrid
 id icon
 id icon_group
 id icon_only
+id icopicPopup
 id idNumber
 id ifRoom
 id image
@@ -1537,6 +1539,7 @@ id popup_close
 id popup_hourlycost
 id popup_profile
 id popup_rating
+id popup_reserve
 id postext
 id profile_name
 id profile_pic

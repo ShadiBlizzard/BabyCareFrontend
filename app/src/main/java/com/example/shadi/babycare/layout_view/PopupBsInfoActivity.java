@@ -8,6 +8,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -20,7 +21,8 @@ public class PopupBsInfoActivity extends Activity {
 
     private TextView name, surname, hourlyCost;
     private RatingBar rating;
-    private Button profile, close;
+    private Button profile, reserve;
+    private ImageView close;
     private Uzer bs;
     private Reservation pendingRes;
 
@@ -38,6 +40,7 @@ public class PopupBsInfoActivity extends Activity {
         hourlyCost = findViewById(R.id.popup_hourlycost);
         rating = findViewById(R.id.popup_rating);
         profile = findViewById(R.id.popup_profile);
+        reserve = findViewById(R.id.popup_reserve);
         close = findViewById(R.id.popup_close);
 
         name.setText(bs.getData().getName());
@@ -81,9 +84,18 @@ public class PopupBsInfoActivity extends Activity {
             }
         });
 
-        close.setOnClickListener(new View.OnClickListener() {
+        reserve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //attivita di prenotazione
+                Intent i = new Intent(getApplicationContext(), OkActivity.class);
+                startActivity(i);
+            }
+        });
+
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 finish();
             }
         });
