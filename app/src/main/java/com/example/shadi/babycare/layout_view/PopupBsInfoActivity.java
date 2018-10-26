@@ -22,7 +22,7 @@ public class PopupBsInfoActivity extends Activity {
     private TextView name, surname, hourlyCost;
     private RatingBar rating;
     private Button profile, reserve;
-    private ImageView close;
+    private ImageView close, icopic;
     private Uzer bs;
     private Reservation pendingRes;
 
@@ -42,11 +42,13 @@ public class PopupBsInfoActivity extends Activity {
         profile = findViewById(R.id.popup_profile);
         reserve = findViewById(R.id.popup_reserve);
         close = findViewById(R.id.popup_close);
+        icopic = findViewById(R.id.icopicPopup);
 
         name.setText(bs.getData().getName());
         surname.setText(bs.getData().getSurname());
         hourlyCost.setText(bs.getHourlyPrice() + " €/h");
         rating.setRating(bs.getRating());
+        icopic.setImageResource(bs.getPic());
 
         //popup window layout settings
         DisplayMetrics dm = new DisplayMetrics();

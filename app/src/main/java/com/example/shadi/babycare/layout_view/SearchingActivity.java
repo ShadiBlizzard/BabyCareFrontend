@@ -170,10 +170,39 @@ public class SearchingActivity extends BaseActivity {
 
                     //INIZIO HARDCODING
                     List<Uzer> bs = new ArrayList<>();
+
                     bs.add(new Uzer());
-                    bs.get(0).getData().setAddress("milano, piazza leonardo");
+                    bs.get(0).getData().setAddress("milano, via pacini 40");
+                    bs.get(0).getData().setName("Maria");
+                    bs.get(0).getData().setSurname("Varani");
+                    bs.get(0).setHourlyPrice(5);
+                    bs.get(0).setRating(3);
+                    bs.get(0).setPic(R.drawable.bs1);
+
                     bs.add(new Uzer());
-                    bs.get(1).getData().setAddress("milano, via bonardi");
+                    bs.get(1).getData().setAddress("milano, via bassini 35");
+                    bs.get(1).getData().setName("Luca");
+                    bs.get(1).getData().setSurname("Mazza");
+                    bs.get(1).setHourlyPrice(8);
+                    bs.get(1).setRating(3.5f);
+                    bs.get(1).setPic(R.drawable.bs2);
+
+                    bs.add(new Uzer());
+                    bs.get(2).getData().setAddress("milano, via golgi 60");
+                    bs.get(2).getData().setName("Daniele");
+                    bs.get(2).getData().setSurname("Marini");
+                    bs.get(2).setHourlyPrice(10);
+                    bs.get(2).setRating(4);
+                    bs.get(2).setPic(R.drawable.bs3);
+
+                    bs.add(new Uzer());
+                    bs.get(3).getData().setAddress("milano, via ponzio 33");
+                    bs.get(3).getData().setName("Alessia");
+                    bs.get(3).getData().setSurname("Rossi");
+                    bs.get(3).setHourlyPrice(6);
+                    bs.get(3).setRating(4.5f);
+                    bs.get(3).setPic(R.drawable.bs4);
+
 
                     //FINE HARDCODING
 

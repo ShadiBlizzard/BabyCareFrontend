@@ -103,6 +103,7 @@ public class ResultMapActivity extends BaseActivity implements OnMapReadyCallbac
         main = new MarkerOptions();
         main.icon(BitmapDescriptorFactory.fromResource(R.drawable.home_icon_map));
         main.position(new LatLng(Double.parseDouble(lat), Double.parseDouble(lng)));
+        main.title("Home");
         map.addMarker(main);
 
 
@@ -138,8 +139,11 @@ public class ResultMapActivity extends BaseActivity implements OnMapReadyCallbac
         Double latiM = coordinates.latitude;
         Double longiM = coordinates.longitude;
 
-        if (Double.compare(latiM, Double.parseDouble(lat))== 0 && Double.compare(longiM, Double.parseDouble(lng)) == 0)
+        if (Double.compare(latiM, Double.parseDouble(lat))== 0 && Double.compare(longiM, Double.parseDouble(lng)) == 0) {
+            marker.showInfoWindow();
             return true;
+        }
+
 
         Uzer bs = null;
         //looking for the correct bs

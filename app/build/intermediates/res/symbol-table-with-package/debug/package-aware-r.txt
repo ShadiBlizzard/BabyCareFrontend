@@ -1118,6 +1118,10 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable bokicon
 drawable booking_icon
+drawable bs1
+drawable bs2
+drawable bs3
+drawable bs4
 drawable button
 drawable button_disabled
 drawable button_enabled
@@ -1537,6 +1541,7 @@ id policy
 id popup_bsname
 id popup_bssurname
 id popup_close
+id popup_content
 id popup_hourlycost
 id popup_profile
 id popup_rating

@@ -8,33 +8,46 @@
     tools:context=".layout_view.PopupBsInfoActivity">
 
 
-    <TextView
-        android:id="@+id/popup_bsname"
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/popup_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="NAME"
-        android:textAppearance="@style/TextBabyCare"
-        android:textSize="22dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/popup_bssurname"
+        app:layout_constraintEnd_toStartOf="@+id/icopicPopup"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/popup_bssurname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="SURNAME"
-        android:textAppearance="@style/TextBabyCare"
-        android:textSize="22dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/popup_bsname"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/popup_bsname" />
+        <TextView
+            android:id="@+id/popup_bsname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="NAME"
+            android:textAppearance="@style/TextBabyCare"
+            android:textSize="22dp"
+            android:textStyle="bold"
+
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/popup_bssurname"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/popup_bssurname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:text="SURNAME"
+            android:textAppearance="@style/TextBabyCare"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/popup_bsname"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/popup_bsname" />
+    </android.support.constraint.ConstraintLayout>
 
     <TextView
         android:id="@+id/popup_hourlycost"
@@ -47,7 +60,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/popup_bssurname" />
+        app:layout_constraintTop_toBottomOf="@+id/popup_content" />
 
     <RatingBar
         android:id="@+id/popup_rating"
@@ -95,12 +108,12 @@
         android:id="@+id/icopicPopup"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:src="@drawable/icopic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/popup_bssurname"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/popup_content"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView

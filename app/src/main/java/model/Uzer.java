@@ -1,5 +1,7 @@
 package model;
 
+import android.graphics.drawable.Drawable;
+
 import java.io.Serializable;
 
 public class Uzer implements Serializable {
@@ -9,6 +11,7 @@ public class Uzer implements Serializable {
     private PersonalData data = new PersonalData();
     private double hourlyPrice=10.50;
     private Role role;
+    private int pic;
 
     public Uzer() {
 
@@ -35,4 +38,19 @@ public class Uzer implements Serializable {
         this.role = role;
     }
 
+    public int getPic() {
+        return pic;
+    }
+
+    public void setPic(int pic) {
+        this.pic = pic;
+    }
+
+    public void setRating(float rating) {
+        this.rating = rating;
+    }
+
+    public void setHourlyPrice(double hourlyPrice) {
+        this.hourlyPrice = hourlyPrice;
+    }
 }
