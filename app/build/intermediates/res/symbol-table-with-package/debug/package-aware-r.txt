@@ -1184,6 +1184,7 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable header
 drawable home_icon
+drawable home_icon_map
 drawable ic_launcher
 drawable ic_launcher_background
 drawable ic_launcher_foreground

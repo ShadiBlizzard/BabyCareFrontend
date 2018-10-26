@@ -35,6 +35,7 @@ public class ResultMapActivity extends BaseActivity implements OnMapReadyCallbac
     private String lat;
     private String lng;
     private GoogleMap map;
+    private MarkerOptions main;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,6 +100,11 @@ public class ResultMapActivity extends BaseActivity implements OnMapReadyCallbac
         //setting zoom on street view
         map.setMinZoomPreference(15);
         this.changeLocation(Double.parseDouble(lat), Double.parseDouble(lng));
+        main = new MarkerOptions();
+        main.icon(BitmapDescriptorFactory.fromResource(R.drawable.home_icon_map));
+        main.position(new LatLng(Double.parseDouble(lat), Double.parseDouble(lng)));
+        map.addMarker(main);
+
 
         //phase 2: add a marker for every babysitter on the map
         for(int i = 0; i<convertedTags.size(); i++) {
@@ -131,6 +137,9 @@ public class ResultMapActivity extends BaseActivity implements OnMapReadyCallbac
         LatLng coordinates = marker.getPosition();
         Double latiM = coordinates.latitude;
         Double longiM = coordinates.longitude;
+
+        if (Double.compare(latiM, Double.parseDouble(lat))== 0 && Double.compare(longiM, Double.parseDouble(lng)) == 0)
+            return true;
 
         Uzer bs = null;
         //looking for the correct bs
