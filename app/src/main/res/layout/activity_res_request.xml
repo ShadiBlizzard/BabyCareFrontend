@@ -130,6 +130,7 @@
                 android:fontFamily="sans-serif-smallcaps"
                 android:text="NUMBER"
                 android:textColor="@color/mainColor"
+                android:textAllCaps="true"
 
                 app:layout_constraintStart_toEndOf="@+id/cl1"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -142,6 +143,7 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="sans-serif-smallcaps"
                 android:text="date"
+                android:textAllCaps="true"
                 android:textColor="@color/mainColor"
 
                 app:layout_constraintStart_toEndOf="@+id/cl1"
@@ -152,6 +154,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
+                android:textAllCaps="true"
                 android:layout_marginTop="8dp"
                 android:fontFamily="sans-serif-smallcaps"
                 android:text="start hour"
@@ -168,6 +171,7 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="sans-serif-smallcaps"
                 android:text="end hour"
+                android:textAllCaps="true"
                 android:textColor="@color/mainColor"
 
                 app:layout_constraintStart_toEndOf="@+id/cl1"
@@ -181,6 +185,7 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="sans-serif-smallcaps"
                 android:text="see on maps"
+                android:textAllCaps="true"
                 android:textColor="@color/mainColor"
 
                 app:layout_constraintStart_toEndOf="@+id/cl1"
@@ -192,6 +197,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:textAllCaps="true"
                 android:fontFamily="sans-serif-smallcaps"
                 android:text="parent name"
 
