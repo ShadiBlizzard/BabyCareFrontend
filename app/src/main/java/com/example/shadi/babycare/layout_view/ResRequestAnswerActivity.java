@@ -1,5 +1,6 @@
 package com.example.shadi.babycare.layout_view;
 
+import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,6 +24,8 @@ public class ResRequestAnswerActivity extends ResRequestActivity {
         accept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), OkActivity.class);
+                startActivity(i);
                 //TODO backend call, accettazione appuntamento
             }
         });

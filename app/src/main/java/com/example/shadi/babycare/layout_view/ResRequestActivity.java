@@ -15,13 +15,16 @@ import com.example.shadi.babycare.R;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import model.Message;
 
 public class ResRequestActivity extends BaseActivity {
-    private TextView timestamp, seen, text, from, to, date, location;
-    private Message m;
+    private TextView timestamp, id, sender, seen, text, from, to, date, location;
+    private Message m = new Message();
+    private String msg = "Hi Alessia, you have just received an appointment request, here the details";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,16 +36,20 @@ public class ResRequestActivity extends BaseActivity {
         nv.getMenu().getItem(1).setChecked(true);
         super.setTitle("Message");
 
-        m = (Message) getIntent().getSerializableExtra("message");
+       // m = (Message) getIntent().getSerializableExtra("message");
 
-        timestamp = findViewById(R.id.res_msg_id);
+
+        timestamp = findViewById(R.id.timestamp);
+        id = findViewById(R.id.res_msg_id);
         text = findViewById(R.id.res_msg_content);
-      /*  sender = findViewById(R.id.res_msg_by);
+        sender = findViewById(R.id.res_msg_by);
 
         date = findViewById(R.id.res_msg_date);
         from = findViewById(R.id.res_msg_from);
         to = findViewById(R.id.res_msg_to);
-        location = findViewById(R.id.res_msg_loc);*/
+        location = findViewById(R.id.res_msg_loc);
+
+
 
     }
 
@@ -50,24 +57,20 @@ public class ResRequestActivity extends BaseActivity {
     public void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
 
-        timestamp.setText(m.getTimestamp().toString());
-        text.setText(m.getTxt());
-      /*  sender.setText(m.getRes().getPa().getData().getName());
+        Calendar d = m.getTimestamp();
 
-        date.setText(m.getRes().getWhen().toString());
-        from.setText(m.getRes().getStart().toString());
-        to.setText(m.getRes().getEnd().toString());
+        int month = d.get(Calendar.MONTH)+1;
+         timestamp.setText(d.get(Calendar.DAY_OF_MONTH) + "/" + month + "/" + d.get(Calendar.YEAR) + " "
+           + d.get(Calendar.HOUR_OF_DAY) + ":" + d.get(Calendar.MINUTE));
+         id.setText("4672");
+         text.setText(msg);
+         sender.setText("Roberto Piano");
 
-        Geocoder g = new Geocoder(this);
-        List<Address> a = new ArrayList<>();
-        try {
-           a = g.getFromLocation(m.getRes().getLat(), m.getRes().getLongi(), 1);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        date.setText(d.get(Calendar.DAY_OF_MONTH) + "/" + month + "/" + d.get(Calendar.YEAR));
+        from.setText("18:00");
+        to.setText("22:00");
 
-        location.setText(a.get(0).getLocality() + ", " + a.get(0).getThoroughfare());
-*/
+        location.setText("milano, via bonardi 4");
 
 
 

@@ -21,28 +21,32 @@
             android:layout_marginTop="8dp"
             android:text="TIMESTAMP"
             android:textAppearance="@style/TextBabyCare"
+            android:textColor="@color/mainColor"
+            android:gravity="center"
+            android:fontFamily="sans-serif-smallcaps"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!--<android.support.constraint.ConstraintLayout
+        <android.support.constraint.ConstraintLayout
             android:id="@+id/boxmsg"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="20dp"
+            android:padding="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/timestamp">
+            app:layout_constraintTop_toBottomOf="@+id/res_msg_content">
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/cl1"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:layout_marginBottom="8dp"
                 android:paddingRight="10dp"
+
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -96,9 +100,9 @@
                     android:id="@+id/textview23"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="10dp"
                     android:fontFamily="sans-serif-smallcaps"
-                    android:text="LOCAIION:"
+                    android:text="LOCATION:"
                     android:textColor="@color/text_color_babycare"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textview22" />
@@ -107,23 +111,14 @@
                     android:id="@+id/textview24"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="10dp"
                     android:fontFamily="sans-serif-smallcaps"
                     android:text="BY:"
                     android:textColor="@color/text_color_babycare"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textview23" />
 
-                <TextView
-                    android:id="@+id/textview25"
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="sans-serif-smallcaps"
-                    android:text="FOR:"
-                    android:textColor="@color/text_color_babycare"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textview24" />
+
             </android.support.constraint.ConstraintLayout>
 
             <TextView
@@ -205,21 +200,9 @@
                 app:layout_constraintStart_toEndOf="@+id/cl1"
                 app:layout_constraintTop_toBottomOf="@id/res_msg_loc" />
 
-            <TextView
-                android:id="@+id/res_msg_for"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:fontFamily="sans-serif-smallcaps"
-                android:text="babysitter name"
 
-                android:textColor="@color/mainColor"
 
-                app:layout_constraintStart_toEndOf="@+id/cl1"
-                app:layout_constraintTop_toBottomOf="@id/res_msg_by" />
-
-        </android.support.constraint.ConstraintLayout>-->
+        </android.support.constraint.ConstraintLayout>
 
         <TextView
             android:id="@+id/res_msg_content"
@@ -228,15 +211,16 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
+            android:padding="5dp"
             android:layout_marginTop="16dp"
-            android:background="@color/button_babycare_disabled"
+            android:background="@drawable/detail_textview"
             android:fontFamily="casual"
             android:text="message_text"
             android:textColor="@color/text_color_babycare"
             android:textSize="22dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/timestamp" />
+            app:layout_constraintTop_toBottomOf="@id/timestamp" />
 
         <android.support.constraint.ConstraintLayout
             android:id="@+id/bs_answer_buttons"
@@ -244,9 +228,10 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/res_msg_content">
+            app:layout_constraintTop_toBottomOf="@+id/boxmsg">
 
         </android.support.constraint.ConstraintLayout>
 

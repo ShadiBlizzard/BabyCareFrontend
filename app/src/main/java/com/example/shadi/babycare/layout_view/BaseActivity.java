@@ -72,7 +72,7 @@ public class BaseActivity extends AppCompatActivity {
                         startActivity(resCaller);
                         break;
                     case R.id.nav_messages:
-                        Intent msgCaller = new Intent(getApplicationContext(), MessagesListActivity.class);
+                        Intent msgCaller = new Intent(getApplicationContext(), ResRequestAnswerActivity.class);
                         //TODO BACKEND RETRIEVE MESSAGES
                         ArrayList<Message> obj = new ArrayList<>();
                         obj.add(new Message());

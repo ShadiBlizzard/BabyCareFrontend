@@ -1567,6 +1567,7 @@ id res_msg_date
 id res_msg_for
 id res_msg_from
 id res_msg_id
+id res_msg_loc
 id res_msg_to
 id rev_detail_pr_name
 id review_detail_bs_name
@@ -1693,6 +1694,7 @@ id textinput_helper_text
 id textview20
 id textview21
 id textview22
+id textview23
 id textview24
 id textview25
 id textview26
