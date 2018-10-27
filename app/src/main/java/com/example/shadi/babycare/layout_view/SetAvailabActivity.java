@@ -54,7 +54,10 @@ public class SetAvailabActivity extends BaseActivity {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                         month++;
-                        date.setText(dayOfMonth+" - "+ month +" - "+year);
+                        String m = String.valueOf(month);
+                        if (month<10)
+                            m = '0' + m;
+                        date.setText(dayOfMonth+" - "+ m +" - "+year);
                         mCurrentDate.set(year, month, dayOfMonth);
                         yearChosen = year;
                         monthChosen = month;

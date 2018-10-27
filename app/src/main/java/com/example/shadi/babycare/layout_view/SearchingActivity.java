@@ -71,7 +71,10 @@ public class SearchingActivity extends BaseActivity {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                         month++;
-                        calendar.setText(dayOfMonth + " - " + month + " - " + year);
+                        String m = String.valueOf(month);
+                        if (month<10)
+                            m = '0' + m;
+                        calendar.setText(dayOfMonth + " - " + m + " - " + year);
                         mCurrentDate.set(year, month, dayOfMonth);
                         yearChosen = year;
                         monthChosen = month;
@@ -95,7 +98,10 @@ public class SearchingActivity extends BaseActivity {
                     @Override
                     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
 
-                        timer1.setText(hourOfDay + ":" + String.format("%02d", minute));
+                        String hour = String.valueOf(hourOfDay);
+                        if (hourOfDay<10)
+                            hour = '0'+hour;
+                        timer1.setText(hour + ":" + String.format("%02d", minute));
                         startingHourChosen = hourOfDay;
                         startingMinuteChosen = minute;
                     }
@@ -115,8 +121,11 @@ public class SearchingActivity extends BaseActivity {
                 TimePickerDialog tpd2 = new TimePickerDialog(SearchingActivity.this, R.style.DialogTheme, new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                        String hour = String.valueOf(hourOfDay);
+                        if (hourOfDay<10)
+                            hour = '0'+hour;
 
-                        timer2.setText(hourOfDay + ":" + String.format("%02d", minute));
+                        timer2.setText(hour + ":" + String.format("%02d", minute));
                         endingHourChosen = hourOfDay;
                         endingMinuteChosen = minute;
                     }

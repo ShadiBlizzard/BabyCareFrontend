@@ -98,7 +98,7 @@ public class BaseActivity extends AppCompatActivity {
                         startActivity(profileCaller);
                         break;
                     case R.id.nav_money:
-                        Intent moneyCaller = new Intent(getApplicationContext(), MoneyAccountActivity.class);
+                        Intent moneyCaller = new Intent(getApplicationContext(), SetAvailabActivity.class);
                         startActivity(moneyCaller);
                         break;
                     case R.id.nav_payments:
