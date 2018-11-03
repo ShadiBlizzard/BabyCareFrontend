@@ -208,6 +208,10 @@
         "source": "C:\\Users\\giuli\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0-alpha1.aar\\c39b881aea5bc1f51f5e149a9fd469f2\\res\\layout\\abc_list_menu_item_layout.xml"
     },
     {
+        "merged": "C:\\Users\\giuli\\StudioProjects\\BabyCareFrontend\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ico_app.png.flat",
+        "source": "C:\\Users\\giuli\\StudioProjects\\BabyCareFrontend\\app\\src\\main\\res\\drawable\\ico_app.png"
+    },
+    {
         "merged": "C:\\Users\\giuli\\StudioProjects\\BabyCareFrontend\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
         "source": "C:\\Users\\giuli\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0-alpha1.aar\\c39b881aea5bc1f51f5e149a9fd469f2\\res\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
     },

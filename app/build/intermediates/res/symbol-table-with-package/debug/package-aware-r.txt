@@ -1195,6 +1195,7 @@ drawable ic_launcher_foreground
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ico_app
 drawable ico_error
 drawable icon_uploader
 drawable icon_uploader_view
@@ -1402,6 +1403,7 @@ id home
 id homeAsUp
 id hours
 id hybrid
+id ico
 id icon
 id icon_group
 id icon_only
@@ -1684,6 +1686,7 @@ id textView37
 id textView38
 id textView39
 id textView4
+id textView40
 id textView5
 id textView6
 id textView7

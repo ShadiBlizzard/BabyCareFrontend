@@ -7,6 +7,7 @@ import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
@@ -44,6 +45,7 @@ public class SearchingActivity extends BaseActivity {
         //this is needed in order to have the drawer in all activities
         FrameLayout fl = findViewById(R.id.content_frame);
         getLayoutInflater().inflate(R.layout.activity_searching, fl);
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
         super.setTitle("Find a babysitter");
 
@@ -209,7 +211,7 @@ public class SearchingActivity extends BaseActivity {
                     bs.get(2).setPic(R.drawable.bs3);
 
                     bs.add(new Uzer());
-                    bs.get(3).getData().setAddress("milano, piazza leonardo da vinci 26");
+                    bs.get(3).getData().setAddress("milano, via colombo 56");
                     bs.get(3).getData().setName("Alessia");
                     bs.get(3).getData().setSurname("Rossi");
                     bs.get(3).setHourlyPrice(6);
