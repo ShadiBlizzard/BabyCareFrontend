@@ -72,9 +72,13 @@ public class SearchingActivity extends BaseActivity {
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                         month++;
                         String m = String.valueOf(month);
+                        String d = String.valueOf(dayOfMonth);
+
+                        if(dayOfMonth<10)
+                            d = '0' + d;
                         if (month<10)
                             m = '0' + m;
-                        calendar.setText(dayOfMonth + " - " + m + " - " + year);
+                        calendar.setText(d + " - " + m + " - " + year);
                         mCurrentDate.set(year, month, dayOfMonth);
                         yearChosen = year;
                         monthChosen = month;
@@ -156,7 +160,7 @@ public class SearchingActivity extends BaseActivity {
                     List<Address> a;
                     if (home_address.isChecked()) {
                         //HARDCODE
-                        String user_address = "milano, via spinoza";
+                        String user_address = "milano, via Bonardi 4 ";
                         a = g.getFromLocationName(user_address, 1);
                     }
                     else if (manualAddress.getText().length() > 0) {
@@ -189,7 +193,7 @@ public class SearchingActivity extends BaseActivity {
                     bs.get(0).setPic(R.drawable.bs1);
 
                     bs.add(new Uzer());
-                    bs.get(1).getData().setAddress("milano, via bassini 35");
+                    bs.get(1).getData().setAddress("milano, via colombo 2");
                     bs.get(1).getData().setName("Luca");
                     bs.get(1).getData().setSurname("Mazza");
                     bs.get(1).setHourlyPrice(8);
@@ -197,7 +201,7 @@ public class SearchingActivity extends BaseActivity {
                     bs.get(1).setPic(R.drawable.bs2);
 
                     bs.add(new Uzer());
-                    bs.get(2).getData().setAddress("milano, via golgi 60");
+                    bs.get(2).getData().setAddress("milano, via celoria");
                     bs.get(2).getData().setName("Daniele");
                     bs.get(2).getData().setSurname("Marini");
                     bs.get(2).setHourlyPrice(10);

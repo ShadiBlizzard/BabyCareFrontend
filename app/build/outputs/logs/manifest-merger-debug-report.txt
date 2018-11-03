@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-182:12
-INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-182:12
-INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-182:12
-INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-182:12
+ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-183:12
+INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-183:12
+INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-183:12
+INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-183:12
 MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\giuli\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.1.aar\198fd36a9606ac6a01c96677bbc079b5\AndroidManifest.xml:17:1-57:12
 MERGED from [com.facebook.android:facebook-android-sdk:4.35.0] C:\Users\giuli\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.35.0.aar\a3528520a08e49d078e43aca5ee68b0c\AndroidManifest.xml:21:1-31:12
 MERGED from [com.facebook.android:facebook-login:4.35.0] C:\Users\giuli\.gradle\caches\transforms-1\files-1.1\facebook-login-4.35.0.aar\76bdf0ee1033cba6da7032c414d3ccfa\AndroidManifest.xml:21:1-31:12
@@ -86,22 +86,22 @@ MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\giuli\.gradle\cach
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\giuli\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\5ea911704eeaec597fe627dee79d9e3d\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\giuli\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\b0ea2933f11a75327816b3c36a61f69b\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\giuli\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\a364826c21a741954a60707f5d0b8332\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-182:12
-INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-182:12
-INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-182:12
+INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-183:12
+INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-183:12
+INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-183:12
 	package
 		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:4:5-41
 		INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-182:12
+		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-183:12
 		INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-182:12
+		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-183:12
 		INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:11-69
@@ -126,7 +126,7 @@ ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidMa
 	android:name
 		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:11:19-63
 application
-ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:13:5-180:19
+ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:13:5-181:19
 MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\giuli\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.1.aar\198fd36a9606ac6a01c96677bbc079b5\AndroidManifest.xml:26:5-55:19
 MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\giuli\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.1.aar\198fd36a9606ac6a01c96677bbc079b5\AndroidManifest.xml:26:5-55:19
 MERGED from [com.facebook.android:facebook-android-sdk:4.35.0] C:\Users\giuli\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.35.0.aar\a3528520a08e49d078e43aca5ee68b0c\AndroidManifest.xml:28:5-29:19
@@ -536,9 +536,13 @@ ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidMa
 	android:name
 		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:178:19-63
 activity#com.example.shadi.babycare.layout_view.MoneyAccountParentActivity
-ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:179:9-85
+ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:179:9-76
 	android:name
 		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:179:19-73
+activity#com.example.shadi.babycare.layout_view.PopupLocationActivity
+ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:180:9-80
+	android:name
+		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:180:19-68
 uses-sdk
 INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml

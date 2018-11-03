@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -9,7 +9,9 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         tools:context=".layout_view.ResRequestActivity">
 
         <TextView
@@ -32,10 +34,10 @@
         <android.support.constraint.ConstraintLayout
             android:id="@+id/boxmsg"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
+            android:layout_height="418dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
             android:padding="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -96,16 +98,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textview21" />
 
-                <TextView
-                    android:id="@+id/textview23"
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="sans-serif-smallcaps"
-                    android:text="LOCATION:"
-                    android:textColor="@color/text_color_babycare"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textview22" />
 
                 <TextView
                     android:id="@+id/textview24"
@@ -116,7 +108,7 @@
                     android:text="BY:"
                     android:textColor="@color/text_color_babycare"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textview23" />
+                    app:layout_constraintTop_toBottomOf="@+id/textview22" />
 
 
             </android.support.constraint.ConstraintLayout>
@@ -126,11 +118,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-smallcaps"
                 android:text="NUMBER"
-                android:textColor="@color/mainColor"
                 android:textAllCaps="true"
+                android:textColor="@color/mainColor"
 
                 app:layout_constraintStart_toEndOf="@+id/cl1"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -154,10 +146,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:textAllCaps="true"
                 android:layout_marginTop="8dp"
                 android:fontFamily="sans-serif-smallcaps"
                 android:text="start hour"
+                android:textAllCaps="true"
                 android:textColor="@color/mainColor"
 
                 app:layout_constraintStart_toEndOf="@+id/cl1"
@@ -177,19 +169,6 @@
                 app:layout_constraintStart_toEndOf="@+id/cl1"
                 app:layout_constraintTop_toBottomOf="@id/res_msg_from" />
 
-            <TextView
-                android:id="@+id/res_msg_loc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:fontFamily="sans-serif-smallcaps"
-                android:text="see on maps"
-                android:textAllCaps="true"
-                android:textColor="@color/mainColor"
-
-                app:layout_constraintStart_toEndOf="@+id/cl1"
-                app:layout_constraintTop_toBottomOf="@id/res_msg_to" />
 
             <TextView
                 android:id="@+id/res_msg_by"
@@ -197,16 +176,58 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:textAllCaps="true"
                 android:fontFamily="sans-serif-smallcaps"
                 android:text="parent name"
+                android:textAllCaps="true"
 
                 android:textColor="@color/mainColor"
 
                 app:layout_constraintStart_toEndOf="@+id/cl1"
-                app:layout_constraintTop_toBottomOf="@id/res_msg_loc" />
+                app:layout_constraintTop_toBottomOf="@id/res_msg_to" />
 
 
+
+
+            <LinearLayout
+                android:id="@+id/line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/mainColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/res_msg_by">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/textview23"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:text="LOCATION"
+                android:textColor="@color/text_color_babycare"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line" />
+
+            <RelativeLayout
+                android:id="@+id/map_container2"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_marginBottom="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textview23"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
 
         </android.support.constraint.ConstraintLayout>
 
@@ -219,6 +240,7 @@
             android:layout_marginStart="8dp"
             android:padding="5dp"
             android:layout_marginTop="16dp"
+            android:gravity="center"
             android:background="@drawable/detail_textview"
             android:fontFamily="casual"
             android:text="message_text"
@@ -228,13 +250,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/timestamp" />
 
+
+
+
         <android.support.constraint.ConstraintLayout
             android:id="@+id/bs_answer_buttons"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/boxmsg">

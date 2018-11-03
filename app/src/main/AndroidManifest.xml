@@ -176,7 +176,8 @@
             android:screenOrientation="portrait" />
         <activity android:name=".layout_view.SetAvailabActivity" />
         <activity android:name=".layout_view.SingleAvActivity" />
-        <activity android:name=".layout_view.MoneyAccountParentActivity"></activity>
+        <activity android:name=".layout_view.MoneyAccountParentActivity" />
+        <activity android:name=".layout_view.PopupLocationActivity"></activity>
     </application>
 
 </manifest>

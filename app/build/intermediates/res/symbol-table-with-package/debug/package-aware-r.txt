@@ -1203,6 +1203,7 @@ drawable invite_icon
 drawable leak_canary_icon
 drawable leak_canary_notification
 drawable leak_canary_toast_background
+drawable loc_icon
 drawable loginbkgsmall
 drawable loginbkgsmall2
 drawable logout_icon
@@ -1429,6 +1430,7 @@ id leak_canary_row_text
 id leak_canary_row_time
 id left
 id light
+id line
 id line1
 id line3
 id listMode
@@ -1437,6 +1439,7 @@ id loginsubmit
 id maillogin
 id manual_address
 id map_container
+id map_container2
 id map_fragment
 id map_ico_home
 id masked
@@ -1567,7 +1570,6 @@ id res_msg_date
 id res_msg_for
 id res_msg_from
 id res_msg_id
-id res_msg_loc
 id res_msg_to
 id rev_detail_pr_name
 id review_detail_bs_name
