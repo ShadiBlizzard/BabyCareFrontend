@@ -193,7 +193,7 @@ public class SearchingActivity extends BaseActivity {
                     bs.get(0).setPic(R.drawable.bs1);
 
                     bs.add(new Uzer());
-                    bs.get(1).getData().setAddress("milano, via colombo 2");
+                    bs.get(1).getData().setAddress("milano, viale lombardia 28");
                     bs.get(1).getData().setName("Luca");
                     bs.get(1).getData().setSurname("Mazza");
                     bs.get(1).setHourlyPrice(8);
@@ -209,7 +209,7 @@ public class SearchingActivity extends BaseActivity {
                     bs.get(2).setPic(R.drawable.bs3);
 
                     bs.add(new Uzer());
-                    bs.get(3).getData().setAddress("milano, via ponzio 33");
+                    bs.get(3).getData().setAddress("milano, piazza leonardo da vinci 26");
                     bs.get(3).getData().setName("Alessia");
                     bs.get(3).getData().setSurname("Rossi");
                     bs.get(3).setHourlyPrice(6);
