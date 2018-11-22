@@ -157,7 +157,6 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".layout_view.PopupBsInfoActivity"
-            android:screenOrientation="portrait"
             android:theme="@style/BabyCare.PopMe" />
         <activity
             android:name=".layout_view.ReviewListActivity"
@@ -177,7 +176,6 @@
         <activity android:name=".layout_view.SetAvailabActivity" />
         <activity android:name=".layout_view.SingleAvActivity" />
         <activity android:name=".layout_view.MoneyAccountParentActivity" />
-        <activity android:name=".layout_view.PopupLocationActivity"></activity>
     </application>
 
 </manifest>

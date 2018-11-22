@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-183:12
-INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-183:12
-INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-183:12
-INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-183:12
+ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-182:12
+INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-182:12
+INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-182:12
+INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-182:12
 MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\giuli\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.1.aar\198fd36a9606ac6a01c96677bbc079b5\AndroidManifest.xml:17:1-57:12
 MERGED from [com.facebook.android:facebook-android-sdk:4.35.0] C:\Users\giuli\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.35.0.aar\a3528520a08e49d078e43aca5ee68b0c\AndroidManifest.xml:21:1-31:12
 MERGED from [com.facebook.android:facebook-login:4.35.0] C:\Users\giuli\.gradle\caches\transforms-1\files-1.1\facebook-login-4.35.0.aar\76bdf0ee1033cba6da7032c414d3ccfa\AndroidManifest.xml:21:1-31:12
@@ -86,22 +86,22 @@ MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\giuli\.gradle\cach
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\giuli\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\5ea911704eeaec597fe627dee79d9e3d\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\giuli\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\b0ea2933f11a75327816b3c36a61f69b\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\giuli\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\a364826c21a741954a60707f5d0b8332\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-183:12
-INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-183:12
-INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-183:12
+INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-182:12
+INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-182:12
+INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-182:12
 	package
 		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:4:5-41
 		INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-183:12
+		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-182:12
 		INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-183:12
+		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:1-182:12
 		INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:2:11-69
@@ -126,7 +126,7 @@ ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidMa
 	android:name
 		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:11:19-63
 application
-ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:13:5-181:19
+ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:13:5-180:19
 MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\giuli\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.1.aar\198fd36a9606ac6a01c96677bbc079b5\AndroidManifest.xml:26:5-55:19
 MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\giuli\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.1.aar\198fd36a9606ac6a01c96677bbc079b5\AndroidManifest.xml:26:5-55:19
 MERGED from [com.facebook.android:facebook-android-sdk:4.35.0] C:\Users\giuli\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.35.0.aar\a3528520a08e49d078e43aca5ee68b0c\AndroidManifest.xml:28:5-29:19
@@ -490,59 +490,57 @@ ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidMa
 	android:name
 		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:156:13-58
 activity#com.example.shadi.babycare.layout_view.PopupBsInfoActivity
-ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:158:9-161:53
-	android:screenOrientation
-		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:160:13-49
+ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:158:9-160:53
 	android:theme
-		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:161:13-50
+		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:160:13-50
 	android:name
 		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:159:13-60
 activity#com.example.shadi.babycare.layout_view.ReviewListActivity
-ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:162:9-164:52
+ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:161:9-163:52
 	android:screenOrientation
-		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:164:13-49
+		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:163:13-49
 	android:name
-		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:163:13-59
+		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:162:13-59
 activity#com.example.shadi.babycare.layout_view.MoneyAccountActivity
-ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:165:9-167:52
+ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:164:9-166:52
 	android:screenOrientation
-		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:167:13-49
+		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:166:13-49
 	android:name
-		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:166:13-61
+		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:165:13-61
 activity#com.example.shadi.babycare.layout_view.PaymentListActivity
-ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:168:9-170:52
+ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:167:9-169:52
 	android:screenOrientation
-		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:170:13-49
+		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:169:13-49
 	android:name
-		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:169:13-60
+		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:168:13-60
 activity#com.example.shadi.babycare.layout_view.PaymentActivity
-ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:171:9-173:52
+ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:170:9-172:52
 	android:screenOrientation
-		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:173:13-49
+		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:172:13-49
 	android:name
-		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:172:13-56
+		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:171:13-56
 activity#com.example.shadi.babycare.layout_view.CreditCardActivity
-ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:174:9-176:52
+ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:173:9-175:52
 	android:screenOrientation
-		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:176:13-49
+		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:175:13-49
 	android:name
-		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:175:13-59
+		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:174:13-59
 activity#com.example.shadi.babycare.layout_view.SetAvailabActivity
-ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:177:9-68
+ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:176:9-68
 	android:name
-		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:177:19-65
+		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:176:19-65
 activity#com.example.shadi.babycare.layout_view.SingleAvActivity
-ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:178:9-66
+ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:177:9-66
 	android:name
-		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:178:19-63
+		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:177:19-63
 activity#com.example.shadi.babycare.layout_view.MoneyAccountParentActivity
-ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:179:9-76
+ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:178:9-76
 	android:name
-		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:179:19-73
+		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:178:19-73
 activity#com.example.shadi.babycare.layout_view.PopupLocationActivity
-ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:180:9-80
+ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:179:9-80
 	android:name
-		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:180:19-68
+		ADDED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml:179:19-68
 uses-sdk
 INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\giuli\StudioProjects\BabyCareFrontend\app\src\main\AndroidManifest.xml
